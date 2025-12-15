@@ -30,6 +30,26 @@
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--alert:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M13%2014h-2V9h2m0%209h-2v-2h2M1%2021h22L12%202z%22/%3E%3C/svg%3E');--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M13%209h-2V7h2m0%2010h-2v-6h2m-1-9A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%206a6%206%200%200%201%206%206c0%202.22-1.21%204.16-3%205.2V19a1%201%200%200%201-1%201h-4a1%201%200%200%201-1-1v-1.8c-1.79-1.04-3-2.98-3-5.2a6%206%200%200%201%206-6m2%2015v1a1%201%200%200%201-1%201h-2a1%201%200%200%201-1-1v-1zm6-10h3v2h-3zM1%2011h3v2H1zM13%201v3h-2V1zM4.92%203.5l2.13%202.14-1.42%201.41L3.5%204.93zm12.03%202.13%202.12-2.13%201.43%201.43-2.13%202.12z%22/%3E%3C/svg%3E');}</style>
+
 
 
     
@@ -499,6 +519,29 @@
   
   
     <li class="md-nav__item">
+      <a href="https://community-scripts.github.io/ProxmoxVE/scripts?id=endurain&category=Gaming+%26+Leisure" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Proxmox community script
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../maria-to-postgres-migration/" class="md-nav__link">
         
   
@@ -559,6 +602,29 @@
             Features
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/single-sign-on/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Single Sign-On (SSO)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -687,9 +753,20 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../developer-guide/" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -698,7 +775,88 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Developer guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer-guide/setup-dev-env/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup a development environment
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer-guide/authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Authentication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer-guide/supported-types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Supported types
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -845,12 +1003,12 @@
 <h1 id="bare-metal-installation-guide">Bare-Metal Installation Guide</h1>
 <p>This guide explains how to install <strong>Endurain</strong> bare-metal on Debian without Docker.</p>
 <h2 id="1-install-required-dependencies">1. Install Required Dependencies</h2>
-<pre><code class="language-bash">apt install -y \
-  build-essential \
-  git \
-  curl \
-  python3-dev
-</code></pre>
+<div class="highlight"><pre><span></span><code>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>build-essential<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>git<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>curl<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>python3-dev
+</code></pre></div>
 <h2 id="2-install-required-runtime-tools">2. Install Required Runtime Tools</h2>
 <p>Install the required tools from their official sources:</p>
 <ul>
@@ -860,106 +1018,106 @@
 </ul>
 <h2 id="3-download-endurain-release">3. Download Endurain Release</h2>
 <p>Run the following command to download and unpack the latest release.</p>
-<pre><code class="language-bash">mkdir -p /path/to/endurain
-cd /path/to/endurain
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>/path/to/endurain
+<span class="nb">cd</span><span class="w"> </span>/path/to/endurain
 
-TAG=$(curl -s https://api.github.com/repos/endurain-project/endurain/releases/latest \
-  | grep -oP '&quot;tag_name&quot;: &quot;\K(.*)(?=&quot;)')
-curl -L &quot;https://github.com/endurain-project/endurain/archive/refs/tags/$TAG.tar.gz&quot; \
-  | tar xz
-EXTRACTED=$(ls -d endurain-*)
-shopt -s dotglob
-mv &quot;$EXTRACTED&quot;/* .
-shopt -u dotglob
-rm -rf &quot;$EXTRACTED&quot;
-</code></pre>
+<span class="nv">TAG</span><span class="o">=</span><span class="k">$(</span>curl<span class="w"> </span>-s<span class="w"> </span>https://api.github.com/repos/endurain-project/endurain/releases/latest<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-oP<span class="w"> </span><span class="s1">&#39;&quot;tag_name&quot;: &quot;\K(.*)(?=&quot;)&#39;</span><span class="k">)</span>
+curl<span class="w"> </span>-L<span class="w"> </span><span class="s2">&quot;https://github.com/endurain-project/endurain/archive/refs/tags/</span><span class="nv">$TAG</span><span class="s2">.tar.gz&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="p">|</span><span class="w"> </span>tar<span class="w"> </span>xz
+<span class="nv">EXTRACTED</span><span class="o">=</span><span class="k">$(</span>ls<span class="w"> </span>-d<span class="w"> </span>endurain-*<span class="k">)</span>
+<span class="nb">shopt</span><span class="w"> </span>-s<span class="w"> </span>dotglob
+mv<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$EXTRACTED</span><span class="s2">&quot;</span>/*<span class="w"> </span>.
+<span class="nb">shopt</span><span class="w"> </span>-u<span class="w"> </span>dotglob
+rm<span class="w"> </span>-rf<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$EXTRACTED</span><span class="s2">&quot;</span>
+</code></pre></div>
 <h2 id="4-create-environment-configuration">4. Create Environment Configuration</h2>
 <p>Prepare data storage.</p>
-<pre><code class="language-bash">mkdir -p /path/to/endurain_data/{data,logs}
-</code></pre>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>/path/to/endurain_data/<span class="o">{</span>data,logs<span class="o">}</span>
+</code></pre></div>
 <p>Copy the provided example.</p>
-<pre><code class="language-bash">cp /path/to/endurain/.env.example /path/to/endurain/.env
-</code></pre>
+<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>/path/to/endurain/.env.example<span class="w"> </span>/path/to/endurain/.env
+</code></pre></div>
 <p>Generate your <code>SECRET_KEY</code> and <code>FERNET_KEY</code>. These keys are required for Endurain to work, so be sure to paste them into your <code>.env</code> file.</p>
-<pre><code class="language-bash">openssl rand -hex 32 # SECRET_KEY
-openssl rand -base64 32 # FERNET_KEY
-</code></pre>
+<div class="highlight"><pre><span></span><code>openssl<span class="w"> </span>rand<span class="w"> </span>-hex<span class="w"> </span><span class="m">32</span><span class="w"> </span><span class="c1"># SECRET_KEY</span>
+openssl<span class="w"> </span>rand<span class="w"> </span>-base64<span class="w"> </span><span class="m">32</span><span class="w"> </span><span class="c1"># FERNET_KEY</span>
+</code></pre></div>
 <p>Edit <code>.env</code> file.</p>
-<pre><code class="language-bash">nano /path/to/endurain/.env
-</code></pre>
+<div class="highlight"><pre><span></span><code>nano<span class="w"> </span>/path/to/endurain/.env
+</code></pre></div>
 <p>Adjust the environment variables and set keys. You definitely have to adjust <code>FRONTEND_DIR</code>, <code>BACKEND_DIR</code> and <code>DB_HOST</code>.<br />
 Environment variables are explained in the <a href="../advanced-started/">Environment Variables Guide</a>.</p>
-<pre><code class="language-env">DB_HOST=localhost
+<div class="highlight"><pre><span></span><code>DB_HOST=localhost
 BACKEND_DIR=&quot;/path/to/endurain/backend/app&quot;
 FRONTEND_DIR=&quot;/path/to/endurain/frontend/app/dist&quot;
 DATA_DIR=&quot;/path/to/endurain_data/data&quot;
 LOGS_DIR=&quot;/path/to/endurain_data/logs&quot;
-</code></pre>
+</code></pre></div>
 <h2 id="5-build-the-frontend">5. Build the Frontend</h2>
-<pre><code class="language-bash">cd /path/to/endurain/frontend/app
-npm ci
-npm run build
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/path/to/endurain/frontend/app
+npm<span class="w"> </span>ci
+npm<span class="w"> </span>run<span class="w"> </span>build
+</code></pre></div>
 <p>Create <code>env.js</code>. Edit the URL if you use a reverse proxy.</p>
-<pre><code class="language-bash">cat &lt;&lt; 'EOF' &gt; /path/to/endurain/frontend/app/dist/env.js
-window.env = {
-  ENDURAIN_HOST: &quot;http://YOUR_SERVER_IP:8080&quot;,
-};
-EOF
-</code></pre>
+<div class="highlight"><pre><span></span><code>cat<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39; &gt; /path/to/endurain/frontend/app/dist/env.js</span>
+<span class="s">window.env = {</span>
+<span class="s">  ENDURAIN_HOST: &quot;http://YOUR_SERVER_IP:8080&quot;,</span>
+<span class="s">};</span>
+<span class="s">EOF</span>
+</code></pre></div>
 <h2 id="6-set-up-the-backend">6. Set Up the Backend</h2>
-<pre><code class="language-bash">cd /path/to/endurain/backend
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/path/to/endurain/backend
 
-uv tool install poetry
-uv tool update-shell
-export PATH=&quot;/root/.local/bin:$PATH&quot;
+uv<span class="w"> </span>tool<span class="w"> </span>install<span class="w"> </span>poetry
+uv<span class="w"> </span>tool<span class="w"> </span>update-shell
+<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/root/.local/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
 
-poetry self add poetry-plugin-export
-poetry export -f requirements.txt --output requirements.txt --without-hashes
+poetry<span class="w"> </span>self<span class="w"> </span>add<span class="w"> </span>poetry-plugin-export
+poetry<span class="w"> </span><span class="nb">export</span><span class="w"> </span>-f<span class="w"> </span>requirements.txt<span class="w"> </span>--output<span class="w"> </span>requirements.txt<span class="w"> </span>--without-hashes
 
-uv venv
-uv pip install -r requirements.txt
-</code></pre>
+uv<span class="w"> </span>venv
+uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</code></pre></div>
 <h2 id="7-setup-postgres-database">7. Setup Postgres Database</h2>
 <p>Run the following commands to create a PostgreSQL user and database for Endurain:</p>
-<pre><code class="language-bash">sudo -u postgres createuser -P endurain
-sudo -u postgres createdb -O endurain endurain
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>-u<span class="w"> </span>postgres<span class="w"> </span>createuser<span class="w"> </span>-P<span class="w"> </span>endurain
+sudo<span class="w"> </span>-u<span class="w"> </span>postgres<span class="w"> </span>createdb<span class="w"> </span>-O<span class="w"> </span>endurain<span class="w"> </span>endurain
+</code></pre></div>
 <p>Check that the PostgreSQL client and server encodings are set to UTF-8.</p>
-<pre><code class="language-bash">sudo -u postgres psql -c &quot;SHOW client_encoding;&quot;
-sudo -u postgres psql -c &quot;SHOW server_encoding;&quot;
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>-u<span class="w"> </span>postgres<span class="w"> </span>psql<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;SHOW client_encoding;&quot;</span>
+sudo<span class="w"> </span>-u<span class="w"> </span>postgres<span class="w"> </span>psql<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;SHOW server_encoding;&quot;</span>
+</code></pre></div>
 <p>If either value is SQL_ASCII, set UTF-8 explicitly for the user and the database.</p>
-<pre><code class="language-bash">sudo -u postgres psql -c &quot;ALTER ROLE endurain SET client_encoding = 'UTF8';&quot;
-sudo -u postgres psql -c &quot;ALTER DATABASE endurain SET client_encoding = 'UTF8';&quot;
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>-u<span class="w"> </span>postgres<span class="w"> </span>psql<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;ALTER ROLE endurain SET client_encoding = &#39;UTF8&#39;;&quot;</span>
+sudo<span class="w"> </span>-u<span class="w"> </span>postgres<span class="w"> </span>psql<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;ALTER DATABASE endurain SET client_encoding = &#39;UTF8&#39;;&quot;</span>
+</code></pre></div>
 <p>This ensures that all connections to the endurain database default to proper UTF-8 encoding.</p>
 <h2 id="8-systemd-service">8. Systemd Service</h2>
 <p>This is an example how you could set up your systemd service.</p>
-<pre><code class="language-bash">cat &lt;&lt; 'EOF' &gt; /etc/systemd/system/endurain.service
-[Unit]
-Description=Endurain FastAPI Backend
-After=network.target postgresql.service
+<div class="highlight"><pre><span></span><code>cat<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39; &gt; /etc/systemd/system/endurain.service</span>
+<span class="s">[Unit]</span>
+<span class="s">Description=Endurain FastAPI Backend</span>
+<span class="s">After=network.target postgresql.service</span>
 
-[Service]
-WorkingDirectory=/path/to/endurain/backend/app
-EnvironmentFile=/path/to/endurain/.env
-ExecStart=/path/to/endurain/backend/.venv/bin/uvicorn main:app --host 0.0.0.0 --port 8080
-Restart=always
-RestartSec=5
-User=root
-StandardOutput=journal
-StandardError=journal
+<span class="s">[Service]</span>
+<span class="s">WorkingDirectory=/path/to/endurain/backend/app</span>
+<span class="s">EnvironmentFile=/path/to/endurain/.env</span>
+<span class="s">ExecStart=/path/to/endurain/backend/.venv/bin/uvicorn main:app --host 0.0.0.0 --port 8080</span>
+<span class="s">Restart=always</span>
+<span class="s">RestartSec=5</span>
+<span class="s">User=root</span>
+<span class="s">StandardOutput=journal</span>
+<span class="s">StandardError=journal</span>
 
-[Install]
-WantedBy=multi-user.target
-EOF
-</code></pre>
+<span class="s">[Install]</span>
+<span class="s">WantedBy=multi-user.target</span>
+<span class="s">EOF</span>
+</code></pre></div>
 <p>Enable and start the service.</p>
-<pre><code class="language-bash">systemctl daemon-reload
-systemctl enable endurain
-systemctl start endurain
-</code></pre>
+<div class="highlight"><pre><span></span><code>systemctl<span class="w"> </span>daemon-reload
+systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>endurain
+systemctl<span class="w"> </span>start<span class="w"> </span>endurain
+</code></pre></div>
 
 
 

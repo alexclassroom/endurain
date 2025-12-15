@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../../getting-started/maria-to-postgres-migration/">
       
       
-        <link rel="next" href="../advanced-started/">
+        <link rel="next" href="../sleep-scoring/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Getting started easy - Endurain documentation</title>
+        <title>Single Sign-On (SSO) - Endurain documentation</title>
       
     
     
@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#getting-started" class="md-skip">
+        <a href="#single-sign-on-sso-configuration" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Getting started easy
+              Single Sign-On (SSO)
             
           </span>
         </div>
@@ -293,20 +293,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -322,7 +320,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Hosting Guide
@@ -333,32 +331,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Getting started easy
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../getting-started/getting-started/" class="md-nav__link">
         
   
   
@@ -369,182 +345,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installing-docker-and-caddy-reverse-proxy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installing Docker and Caddy reverse proxy
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installing-caddy-reverse-proxy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installing Caddy reverse proxy
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installing-nginx-proxy-manager-reverse-proxy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installing Nginx Proxy Manager reverse proxy
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-directory-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create directory structure
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-compose-deployment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker compose Deployment
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker compose Deployment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#creating-the-docker-compose-and-env-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      Creating the docker-compose and .env file
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#start-the-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      Start the stack
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#visit-the-site" class="md-nav__link">
-    <span class="md-ellipsis">
-      Visit the site
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configure-a-reverse-proxy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configure a reverse proxy
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configure a reverse proxy">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configure-caddy-as-reverse-proxy-and-get-ssl-cert-from-letsencrypt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configure Caddy as reverse proxy and get SSL cert from letsencrypt
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configure-nginx-proxy-manager-as-reverse-proxy-and-get-ssl-cert-from-letsencrypt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configure Nginx Proxy Manager as reverse proxy and get SSL cert from letsencrypt
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#access-your-endurain-instance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Access your Endurain instance
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-update" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to update
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#things-to-think-about" class="md-nav__link">
-    <span class="md-ellipsis">
-      Things to think about
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-credentials" class="md-nav__link">
-    <span class="md-ellipsis">
-      Default Credentials
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -557,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-started/" class="md-nav__link">
+      <a href="../../getting-started/advanced-started/" class="md-nav__link">
         
   
   
@@ -580,7 +380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bare-metal/" class="md-nav__link">
+      <a href="../../getting-started/bare-metal/" class="md-nav__link">
         
   
   
@@ -626,7 +426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../maria-to-postgres-migration/" class="md-nav__link">
+      <a href="../../getting-started/maria-to-postgres-migration/" class="md-nav__link">
         
   
   
@@ -653,18 +453,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -680,7 +482,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Features
@@ -691,10 +493,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../features/single-sign-on/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Single Sign-On (SSO)
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -705,6 +529,236 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#important-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Notes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-identity-providers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Identity Providers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pocket-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pocket ID
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pocket ID">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-configure-pocket-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Configure Pocket ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-configure-endurain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Configure Endurain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-test-the-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Test the Integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tailscale-tsidp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tailscale TSIDP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tailscale TSIDP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-configure-tsidp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Configure TSIDP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-configure-endurain_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Configure Endurain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-test-the-integration_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Test the Integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-configuration-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Configuration Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="General Configuration Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-configure-your-identity-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Configure Your Identity Provider
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-configure-endurain" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Configure Endurain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-verify-the-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Verify the Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Considerations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -717,7 +771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/sleep-scoring/" class="md-nav__link">
+      <a href="../sleep-scoring/" class="md-nav__link">
         
   
   
@@ -994,82 +1048,154 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#important-notes" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Important Notes
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#installing-docker-and-caddy-reverse-proxy" class="md-nav__link">
+  <a href="#supported-identity-providers" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing Docker and Caddy reverse proxy
+      Supported Identity Providers
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#installing-caddy-reverse-proxy" class="md-nav__link">
+  <a href="#configuration-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing Caddy reverse proxy
+      Configuration Examples
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installing-nginx-proxy-manager-reverse-proxy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installing Nginx Proxy Manager reverse proxy
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-directory-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create directory structure
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-compose-deployment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker compose Deployment
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker compose Deployment">
+    <nav class="md-nav" aria-label="Configuration Examples">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#creating-the-docker-compose-and-env-file" class="md-nav__link">
+  <a href="#pocket-id" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating the docker-compose and .env file
+      Pocket ID
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pocket ID">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-configure-pocket-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Configure Pocket ID
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#start-the-stack" class="md-nav__link">
+  <a href="#step-2-configure-endurain" class="md-nav__link">
     <span class="md-ellipsis">
-      Start the stack
+      Step 2: Configure Endurain
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#visit-the-site" class="md-nav__link">
+  <a href="#step-3-test-the-integration" class="md-nav__link">
     <span class="md-ellipsis">
-      Visit the site
+      Step 3: Test the Integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tailscale-tsidp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tailscale TSIDP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tailscale TSIDP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-configure-tsidp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Configure TSIDP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-configure-endurain_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Configure Endurain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-test-the-integration_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Test the Integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-configuration-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Configuration Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="General Configuration Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-configure-your-identity-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Configure Your Identity Provider
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-configure-endurain" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Configure Endurain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-verify-the-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Verify the Configuration
     </span>
   </a>
   
@@ -1081,28 +1207,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configure-a-reverse-proxy" class="md-nav__link">
+  <a href="#troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
-      Configure a reverse proxy
+      Troubleshooting
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configure a reverse proxy">
+    <nav class="md-nav" aria-label="Troubleshooting">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configure-caddy-as-reverse-proxy-and-get-ssl-cert-from-letsencrypt" class="md-nav__link">
+  <a href="#common-issues" class="md-nav__link">
     <span class="md-ellipsis">
-      Configure Caddy as reverse proxy and get SSL cert from letsencrypt
+      Common Issues
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#configure-nginx-proxy-manager-as-reverse-proxy-and-get-ssl-cert-from-letsencrypt" class="md-nav__link">
+  <a href="#logs" class="md-nav__link">
     <span class="md-ellipsis">
-      Configure Nginx Proxy Manager as reverse proxy and get SSL cert from letsencrypt
+      Logs
     </span>
   </a>
   
@@ -1114,36 +1240,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#access-your-endurain-instance" class="md-nav__link">
+  <a href="#security-considerations" class="md-nav__link">
     <span class="md-ellipsis">
-      Access your Endurain instance
+      Security Considerations
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-update" class="md-nav__link">
+  <a href="#additional-resources" class="md-nav__link">
     <span class="md-ellipsis">
-      How to update
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#things-to-think-about" class="md-nav__link">
-    <span class="md-ellipsis">
-      Things to think about
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-credentials" class="md-nav__link">
-    <span class="md-ellipsis">
-      Default Credentials
+      Additional Resources
     </span>
   </a>
   
@@ -1168,240 +1276,239 @@
   
 
 
-<h1 id="getting-started">Getting started</h1>
-<p>Welcome to the guide for getting started on hosting your own production instance of Endurain. Like many other services, Endurain is easiest to get up and running trough Docker compose. It is possible to get Endurain up and running without a domain and reverse proxy, but this guide assumes you want to use a reverse proxy and your domain. Endurain can run on any computer that support OCI containers, but in this guide we are using Debian 13 (should also work with 12).</p>
-<h2 id="prerequisites">Prerequisites</h2>
+<h1 id="single-sign-on-sso-configuration">Single Sign-On (SSO) Configuration</h1>
+<p>Endurain supports Single Sign-On (SSO) integration through OAuth 2.0 and OpenID Connect (OIDC) protocols. This allows users to authenticate using their existing identity provider accounts.</p>
+<h2 id="important-notes">Important Notes</h2>
+<div class="admonition warning">
+<p class="admonition-title">Email Address Matching</p>
+<p>If you already have an existing Endurain account, the email address in your SSO provider <strong>must match</strong> your Endurain account email. If the email addresses don't match, Endurain will create a new user account with the SSO email address.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Requirements</p>
+<p>You'll need:</p>
 <ul>
-<li>Domain name pointed to your external IP address.</li>
-<li>Open FW rules to your server on port 443 and 80. (trough NAT if you are running ipv4)</li>
-<li>A computer/server with enough disk space for your activity files.</li>
-<li>A Linux distro that has <code>docker compose</code> cli, and <code>caddy</code> in the repositories.</li>
+<li>The fully qualified domain name (FQDN) of your OIDC provider</li>
+<li>The FQDN of your Endurain installation</li>
+<li>Administrator access to both your identity provider and Endurain</li>
 </ul>
-<h2 id="installing-docker-and-caddy-reverse-proxy">Installing Docker and Caddy reverse proxy</h2>
-<p>Note:
-If you have a old-ish distro (Ubuntu 22.04 and older) you need to add the repo for Docker. Read how to do it on <a href="https://docs.docker.com/compose/install/linux/">Docker</a> documentation. For newer distroes (Debian 13 and Ubuntu 24.04 it is not expected for you to have to do this step).</p>
-<p>Install Docker:</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span>-y
-sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>docker.io<span class="w"> </span>docker-compose<span class="w"> </span>-y
-</code></pre></div>
-<p>Confirm your user has the id 1000:</p>
-<div class="highlight"><pre><span></span><code>id
-</code></pre></div>
-<p>If you are not the user 1000, you need to set the <code>UID</code> and <code>GID</code> to your id in the .env file. But to keep this guide as easy to follow as possible, we will assume that you are user 1000.</p>
-<h2 id="installing-caddy-reverse-proxy">Installing Caddy reverse proxy</h2>
-<p>Note:
-If you have a old-ish distro (Ubuntu 22.04 and older) you need to add the repo for Caddy. Read how to do it on <a href="https://caddyserver.com/docs/install#debian-ubuntu-raspbian">Caddy</a> documentation. For newer distroes (Debian 13 and Ubuntu 24.04 it is not expected for you to have to do this step).</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span>-y
-sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>caddy<span class="w"> </span>-y
-</code></pre></div>
-<h2 id="installing-nginx-proxy-manager-reverse-proxy">Installing Nginx Proxy Manager reverse proxy</h2>
-<p>Nginx Proxy Manager comes as a pre-built Docker image. Please refer to the <a href="https://nginxproxymanager.com/guide/">docs</a> for details on how to install it.</p>
-<h2 id="create-directory-structure">Create directory structure</h2>
-<p>Lets use <code>/opt/endurain/</code> as the root directory for our project.</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mkdir<span class="w"> </span>/opt/endurain
-sudo<span class="w"> </span>chown<span class="w"> </span><span class="m">1000</span>:1000<span class="w"> </span>/opt/endurain
-mkdir<span class="w"> </span>-p<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>/opt/endurain/backend/<span class="o">{</span>data,logs<span class="o">}</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>/opt/endurain/postgres
-</code></pre></div>
-<h2 id="docker-compose-deployment">Docker compose Deployment</h2>
-<p>In this example of setting up Endurain, we will need two files. One <code>docker-compose.yml</code> and <code>.env</code>.</p>
+</div>
+<h2 id="supported-identity-providers">Supported Identity Providers</h2>
+<p>Endurain provides built-in support for the following identity providers:</p>
 <ul>
-<li>docker-compose.yml tells your system how to set up the container, network and storage.</li>
-<li>.env holds our secrets and environment variables.</li>
+<li><strong>Authelia</strong></li>
+<li><strong>Authentik</strong></li>
+<li><strong>Casdoor</strong></li>
+<li><strong>Keycloak</strong></li>
+<li><strong>Pocket ID</strong></li>
 </ul>
-<p>Splitting up the setup like this make it easy to handle updates to the containers, without touching the secrets and other variables.</p>
-<h3 id="creating-the-docker-compose-and-env-file">Creating the docker-compose and .env file</h3>
-<p>To make it as easy as possible for selfhoster to get up and running examples of docker-compose.yml and .env is on the git repo. Here are links to the files on the repo:</p>
+<p>The system also supports custom OIDC providers including:</p>
 <ul>
-<li><a href="https://raw.githubusercontent.com/endurain-project/endurain/refs/heads/master/docker-compose.yml.example">docker-compose.yml.example</a></li>
-<li><a href="https://raw.githubusercontent.com/endurain-project/endurain/refs/heads/master/.env.example">.env.example</a></li>
+<li>Google</li>
+<li>GitHub</li>
+<li>Microsoft Entra ID</li>
+<li>Any other OIDC-compliant provider</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/opt/endurain
-wget<span class="w"> </span>https://raw.githubusercontent.com/endurain-project/endurain/refs/heads/master/docker-compose.yml.example
-wget<span class="w"> </span>https://raw.githubusercontent.com/endurain-project/endurain/refs/heads/master/.env.example
-
-mv<span class="w"> </span>docker-compose.yml.example<span class="w"> </span>docker-compose.yml
-mv<span class="w"> </span>.env.example<span class="w"> </span>.env
-</code></pre></div>
-<p>Now we need to make changes to the files to reflect <em>your</em> environment. Inside docker-compose.yml there is not much we need to do. If you want to store the files another place then <code>/opt/endurain</code> this is the file you need to change.</p>
-<p>Here is an explaination on what you can set in the <code>.env</code>:</p>
+<h2 id="configuration-examples">Configuration Examples</h2>
+<h3 id="pocket-id">Pocket ID</h3>
+<p>Pocket ID is a lightweight, self-hosted identity provider that works seamlessly with Endurain.</p>
+<h4 id="step-1-configure-pocket-id">Step 1: Configure Pocket ID</h4>
+<ol>
+<li>Log into your Pocket ID instance</li>
+<li>Navigate to <strong>Administration</strong> → <strong>OIDC Clients</strong></li>
+<li>Select <strong>Add OIDC client</strong></li>
+<li>Configure the following settings:<ul>
+<li><strong>Name</strong>: <code>Endurain</code></li>
+<li><strong>Client Launch URL</strong>: Your Endurain FQDN (e.g., <code>https://endurain.mydomain.com</code>)</li>
+<li><strong>Callback URLs</strong>: <code>https://endurain.mydomain.com/api/v1/public/idp/callback/pocket-id</code></li>
+</ul>
+</li>
+<li>Click <strong>Save</strong></li>
+<li><strong>Important</strong>: Make a note of your <strong>Client ID</strong> and <strong>Client Secret</strong></li>
+</ol>
+<h4 id="step-2-configure-endurain">Step 2: Configure Endurain</h4>
+<ol>
+<li>Log into your Endurain instance</li>
+<li>Navigate to <strong>Settings</strong> → <strong>Identity Providers</strong></li>
+<li>Select <strong>Add Identity Provider</strong> → <strong>Select Pocket ID</strong></li>
+<li>Configure the following settings:<ul>
+<li><strong>Provider Name</strong>: <code>Pocket ID</code></li>
+<li><strong>Slug</strong>: <code>pocket-id</code></li>
+<li><strong>Provider Type</strong>: <code>OIDC</code></li>
+<li><strong>Issuer URL</strong>: Your Pocket ID FQDN (e.g., <code>https://pocketid.mydomain.com</code>) - <strong>no trailing slash</strong></li>
+<li><strong>Client ID</strong>: The Client ID from Step 1</li>
+<li><strong>Client Secret</strong>: The Client Secret from Step 1</li>
+<li><strong>Scopes</strong>: <code>openid profile email</code></li>
+</ul>
+</li>
+<li>Click <strong>Save</strong></li>
+</ol>
+<h4 id="step-3-test-the-integration">Step 3: Test the Integration</h4>
+<ol>
+<li>Log out of Endurain</li>
+<li>On the login page, you should see a <strong>Sign in with Pocket ID</strong> button</li>
+<li>Click the button to test the SSO flow</li>
+</ol>
+<hr />
+<h3 id="tailscale-tsidp">Tailscale TSIDP</h3>
+<p>Tailscale's identity provider (TSIDP) can be used for secure authentication within your Tailscale network.</p>
+<h4 id="step-1-configure-tsidp">Step 1: Configure TSIDP</h4>
+<ol>
+<li>Log into your TSIDP instance</li>
+<li>Select <strong>Add new client</strong></li>
+<li>Configure the following settings:<ul>
+<li><strong>Client Name</strong>: <code>Endurain</code></li>
+<li><strong>Redirect URIs</strong>: <code>https://endurain.mydomain.com/api/v1/public/idp/callback/tsidp</code></li>
+</ul>
+</li>
+<li>Click <strong>Create client</strong></li>
+<li><strong>Important</strong>: Make a note of your <strong>Client ID</strong> and <strong>Client Secret</strong></li>
+</ol>
+<h4 id="step-2-configure-endurain_1">Step 2: Configure Endurain</h4>
+<ol>
+<li>Log into your Endurain instance</li>
+<li>Navigate to <strong>Settings</strong> → <strong>Identity Providers</strong></li>
+<li>Select <strong>Add Identity Provider</strong> → <strong>Custom</strong></li>
+<li>Configure the following settings:<ul>
+<li><strong>Provider Name</strong>: <code>TSIDP</code></li>
+<li><strong>Slug</strong>: <code>tsidp</code></li>
+<li><strong>Provider Type</strong>: <code>OIDC</code></li>
+<li><strong>Issuer URL</strong>: Your TSIDP FQDN (e.g., <code>https://tsidp.mydomain.com</code>) - <strong>no trailing slash</strong></li>
+<li><strong>Client ID</strong>: The Client ID from Step 1</li>
+<li><strong>Client Secret</strong>: The Client Secret from Step 1</li>
+<li><strong>Scopes</strong>: <code>openid profile email</code></li>
+</ul>
+</li>
+<li>Click <strong>Save</strong></li>
+</ol>
+<h4 id="step-3-test-the-integration_1">Step 3: Test the Integration</h4>
+<ol>
+<li>Log out of Endurain</li>
+<li>On the login page, you should see a <strong>Sign in with TSIDP</strong> button</li>
+<li>Click the button to test the SSO flow</li>
+</ol>
+<hr />
+<h2 id="general-configuration-steps">General Configuration Steps</h2>
+<p>For any OIDC-compliant identity provider, follow these general steps:</p>
+<h3 id="1-configure-your-identity-provider">1. Configure Your Identity Provider</h3>
+<p>Create an OAuth 2.0/OIDC client application with the following settings:</p>
+<ul>
+<li><strong>Application Name</strong>: <code>Endurain</code></li>
+<li><strong>Redirect/Callback URI</strong>: <code>https://&lt;your-endurain-domain&gt;/api/v1/public/idp/callback/&lt;slug&gt;</code></li>
+<li><strong>Grant Type</strong>: <code>Authorization Code</code></li>
+<li><strong>Scopes</strong>: At minimum <code>openid profile email</code></li>
+</ul>
+<p>Save the generated <strong>Client ID</strong> and <strong>Client Secret</strong>.</p>
+<h3 id="2-configure-endurain">2. Configure Endurain</h3>
+<ol>
+<li>Log into Endurain as an administrator</li>
+<li>Navigate to <strong>Settings</strong> → <strong>Identity Providers</strong></li>
+<li>Click <strong>Add Identity Provider</strong></li>
+<li>Select your provider type or choose <strong>Custom</strong> for OIDC providers</li>
+<li>Fill in the required fields (see table below)</li>
+<li>Click <strong>Save</strong></li>
+</ol>
 <table>
 <thead>
 <tr>
-<th>Environment variable</th>
-<th>How to set it</th>
+<th>Field</th>
+<th>Description</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>DB_PASSWORD</td>
-<td>Run <code>openssl rand -hex 32</code> on a terminal to get a secret</td>
+<td><strong>Provider Name</strong></td>
+<td>Display name shown on login button</td>
+<td><code>Google</code>, <code>GitHub</code>, etc.</td>
 </tr>
 <tr>
-<td>POSTGRES_PASSWORD</td>
-<td>Set the same value as DB_PASSWORD.</td>
+<td><strong>Slug</strong></td>
+<td>URL-safe identifier (lowercase, hyphens)</td>
+<td><code>google</code>, <code>github</code></td>
 </tr>
 <tr>
-<td>SECRET_KEY</td>
-<td>Run <code>openssl rand -hex 32</code> on a terminal to get a secret</td>
+<td><strong>Provider Type</strong></td>
+<td>Protocol type</td>
+<td><code>OIDC</code> or <code>OAuth2</code></td>
 </tr>
 <tr>
-<td>FERNET_KEY</td>
-<td>Run <code>python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"</code> on a terminal to get a secret or go to <a href="https://fernetkeygen.com">https://fernetkeygen.com</a>. Example output is <code>7NfMMRSCWcoNDSjqBX8WoYH9nTFk1VdQOdZY13po53Y=</code></td>
+<td><strong>Issuer URL</strong></td>
+<td>Provider's base URL (no trailing slash)</td>
+<td><code>https://accounts.google.com</code></td>
 </tr>
 <tr>
-<td>TZ</td>
-<td>Timezone definition. Insert your timezone. List of available time zones <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">here</a>. Format <code>Europe/Lisbon</code> expected</td>
+<td><strong>Client ID</strong></td>
+<td>OAuth client identifier</td>
+<td>From Step 1</td>
 </tr>
 <tr>
-<td>ENDURAIN_HOST</td>
-<td>https://endurain.yourdomain.com</td>
+<td><strong>Client Secret</strong></td>
+<td>OAuth client secret</td>
+<td>From Step 1</td>
 </tr>
 <tr>
-<td>BEHIND_PROXY</td>
-<td>Change to true if behind reverse proxy</td>
-</tr>
-<tr>
-<td>POSTGRES_DB</td>
-<td>Postgres name for the database.</td>
-</tr>
-<tr>
-<td>POSTGRES_USER</td>
-<td>Postgres user for the database.</td>
+<td><strong>Scopes</strong></td>
+<td>Space-separated OAuth scopes</td>
+<td><code>openid profile email</code></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Please note:</strong></p>
-<p><code>POSTGRES_DB</code> and <code>POSTGRES_USER</code> are values for the database. If you change it from endurain, you also need to set the environment variables for the app image. Please leave them as <code>endurain</code> if you are unsure.</p>
-<h3 id="start-the-stack">Start the stack</h3>
-<p>It is finally time to start the stack!</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/opt/endurain
-sudo<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
-</code></pre></div>
-<p>Check the log output:</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>-f
-</code></pre></div>
-<p>If you do not get any errors, continue to next step.</p>
-<h3 id="visit-the-site">Visit the site</h3>
+<h3 id="3-verify-the-configuration">3. Verify the Configuration</h3>
+<ol>
+<li>Log out of Endurain</li>
+<li>Visit the login page</li>
+<li>Verify that a <strong>Sign in with <code>Provider Name</code></strong> button appears</li>
+<li>Test the authentication flow</li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues">Common Issues</h3>
+<p><strong>Problem</strong>: "Invalid redirect URI" error</p>
 <ul>
-<li>Visit the site insecurly on <code>http://&lt;IP-OF-YOUR-SERVER&gt;:8080</code></li>
-<li>We still can not login to the site, because the <code>ENDURAIN_HOST</code> doesn't match our local URL.</li>
+<li><strong>Solution</strong>: Ensure the callback URL in your identity provider matches exactly: <code>https://&lt;your-domain&gt;/api/v1/public/idp/callback/&lt;slug&gt;</code></li>
 </ul>
-<h2 id="configure-a-reverse-proxy">Configure a reverse proxy</h2>
+<p><strong>Problem</strong>: "Email address mismatch" creates duplicate account</p>
 <ul>
-<li>Before we configure a reverse proxy you need to set your DNS provider to point your domain to your external IP.</li>
-<li>You also need to open your firewall on port 443 and 80 to the server.</li>
+<li><strong>Solution</strong>: Update your existing Endurain account email to match your SSO provider email, or link the identity provider to your existing account</li>
 </ul>
-<h3 id="configure-caddy-as-reverse-proxy-and-get-ssl-cert-from-letsencrypt">Configure Caddy as reverse proxy and get SSL cert from letsencrypt</h3>
-<p>We use Caddy outside docker. This way Debian handles the updates (you just need to run <code>sudo apt update -y</code> and <code>sudo apt upgrade -y</code>)</p>
-<p>Caddy is configured in the file <code>/etc/caddy/Caddyfile</code></p>
-<p>Open the file in your favourite editor, delete the default text, and paste in this:</p>
-<div class="highlight"><pre><span></span><code>endurain.yourdomain.com {
-        reverse_proxy localhost:8080
-}
-</code></pre></div>
-<p>Restart Caddy</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>caddy
-</code></pre></div>
-<p>Check the ouput of Caddy with:</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>journalctl<span class="w"> </span>-u<span class="w"> </span>caddy
-</code></pre></div>
-<h3 id="configure-nginx-proxy-manager-as-reverse-proxy-and-get-ssl-cert-from-letsencrypt">Configure Nginx Proxy Manager as reverse proxy and get SSL cert from letsencrypt</h3>
-<p>Bellow is an example config file for Endurain:
-<div class="highlight"><pre><span></span><code>------------------------------------------------------------
-endurain.yourdomain.com
-------------------------------------------------------------
-
-map $scheme $hsts_header {
-    https &quot;max-age=63072000; preload&quot;;
-}
-
-server {
-    set $forward_scheme http;
-    set $server &quot;your_server_ip&quot;;
-    set $port 8884;
-
-    listen 80;
-    listen [::]:80;
-
-    listen 443 ssl;
-    listen [::]:443 ssl;
-
-    server_name endurain.yourdomain.com;
-
-    http2 on;
-    Let&#39;s Encrypt SSL
-
-    include conf.d/include/letsencrypt-acme-challenge.conf;
-    include conf.d/include/ssl-cache.conf;
-    include conf.d/include/ssl-ciphers.conf;
-    ssl_certificate /etc/letsencrypt/live/npm-21/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/npm-21/privkey.pem;
-    Asset Caching
-
-    include conf.d/include/assets.conf;
-    Block Exploits
-
-    include conf.d/include/block-exploits.conf;
-    HSTS (ngx_http_headers_module is required) (63072000 seconds = 2 years)
-
-    add_header Strict-Transport-Security $hsts_header always;
-    Force SSL
-
-    include conf.d/include/force-ssl.conf;
-
-    proxy_set_header Upgrade $http_upgrade;
-    proxy_set_header Connection $http_connection;
-    proxy_http_version 1.1;
-
-    access_log /data/logs/proxy-host-18_access.log proxy;
-    error_log /data/logs/proxy-host-18_error.log warn;
-
-    location / {
-        HSTS (ngx_http_headers_module is required) (63072000 seconds = 2 years)
-
-        add_header Strict-Transport-Security $hsts_header always;
-
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection $http_connection;
-        proxy_http_version 1.1;
-        Proxy!
-
-        include conf.d/include/proxy.conf;
-    }
-    Custom
-
-    include /data/nginx/custom/server_proxy[.]conf;
-}
-</code></pre></div></p>
-<h2 id="access-your-endurain-instance">Access your Endurain instance</h2>
-<p>You should now be able to access your site on endurain.yourdomain.com</p>
-<p><strong>Log in with username: admin password: admin, and remember to change the password</strong></p>
-<p>🎉 <strong>Weee</strong> 🎉 You now have your own instance of Endurain up and running!</p>
-<h2 id="how-to-update">How to update</h2>
+<p><strong>Problem</strong>: SSO button doesn't appear on login page</p>
 <ul>
-<li>Take a backup of your files and db.</li>
-<li>Check for new releases of the container image <a href="https://github.com/endurain-project/endurain">here</a>. Read release notes carefully for breaking changes.</li>
-<li>Log on your server and run:</li>
-<li>Inside <code>/opt/endurain/docker-compose.yml</code>, change out the version tag (the version after <code>:</code>). If you are running <code>:latest</code> tag on the docker image, you do not have to edit anything in the docker-compose.yml file. </li>
+<li><strong>Solution</strong>: <ul>
+<li>Verify the identity provider is enabled in Endurain settings</li>
+<li>Check if external authentication is enabled on server settings</li>
+<li>Check that the provider configuration is saved correctly</li>
+<li>Clear your browser cache and refresh the page</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/opt/endurain
-sudo<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>pull
-sudo<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
-</code></pre></div>
-<p>The same is the case for Postgres. Check for breaking changes in release notes on <a href="https://www.postgresql.org/docs/release/">Postgres Website</a>.</p>
-<p>** It is generally pretty safe to upgrade postgres minor version f.eks 17.4 to 17.5, but major is often breaking change (example 17.2 to 18.1 )</p>
-<h2 id="things-to-think-about">Things to think about</h2>
-<p>You should implement backup strategy for the following directories:</p>
-<div class="highlight"><pre><span></span><code>/opt/endurain/app/data
-/opt/endurain/app/logs
-</code></pre></div>
-<p>You also need to backup your postgres database. It is not good practice to just backup the volume <code>/opt/endurain/postgres</code> this might be corrupted if  the database is in the middle of a wright when the database goes down.</p>
-<h2 id="default-credentials">Default Credentials</h2>
+</li>
+</ul>
+<p><strong>Problem</strong>: "Invalid issuer URL" error</p>
 <ul>
-<li><strong>Username:</strong> admin  </li>
-<li><strong>Password:</strong> admin</li>
+<li><strong>Solution</strong>: Ensure the Issuer URL does not have a trailing slash and is the correct base URL for your identity provider</li>
+</ul>
+<h3 id="logs">Logs</h3>
+<p>For detailed troubleshooting, check the Endurain backend logs:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>logs<span class="w"> </span>endurain-backend
+<span class="c1"># and/or</span>
+tail<span class="w"> </span>-n<span class="w"> </span><span class="m">100</span><span class="w"> </span>logs/app.log
+</code></pre></div>
+<p>Look for authentication-related errors that can help identify configuration issues.</p>
+<h2 id="security-considerations">Security Considerations</h2>
+<div class="admonition warning">
+<p class="admonition-title">Security Best Practices</p>
+<ul>
+<li>Always use <strong>HTTPS</strong> for both Endurain and your identity provider</li>
+<li>Keep your <strong>Client Secret</strong> confidential and never commit it to version control</li>
+<li>Regularly rotate client secrets</li>
+<li>Use strong, randomly generated secrets</li>
+<li>Limit OAuth scopes to only what's necessary (<code>openid profile email</code> is typically sufficient)</li>
+<li>Monitor authentication logs for suspicious activity</li>
+</ul>
+</div>
+<h2 id="additional-resources">Additional Resources</h2>
+<ul>
+<li><a href="../../developer-guide/authentication/">Authentication Developer Guide</a> - Technical details about Endurain's authentication system</li>
+<li><a href="../../getting-started/getting-started/">Getting Started Guide</a> - General setup instructions</li>
+<li><a href="https://oauth.net/2/">OAuth 2.0 Specification</a> - Official OAuth 2.0 documentation</li>
+<li><a href="https://openid.net/connect/">OpenID Connect Specification</a> - Official OIDC documentation</li>
 </ul>
 
 

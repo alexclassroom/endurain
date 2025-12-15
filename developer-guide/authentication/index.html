@@ -1,0 +1,2175 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../setup-dev-env/">
+      
+      
+        <link rel="next" href="../supported-types/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Authentication - Endurain documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--alert:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M13%2014h-2V9h2m0%209h-2v-2h2M1%2021h22L12%202z%22/%3E%3C/svg%3E');--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M13%209h-2V7h2m0%2010h-2v-6h2m-1-9A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%206a6%206%200%200%201%206%206c0%202.22-1.21%204.16-3%205.2V19a1%201%200%200%201-1%201h-4a1%201%200%200%201-1-1v-1.8c-1.79-1.04-3-2.98-3-5.2a6%206%200%200%201%206-6m2%2015v1a1%201%200%200%201-1%201h-2a1%201%200%200%201-1-1v-1zm6-10h3v2h-3zM1%2011h3v2H1zM13%201v3h-2V1zM4.92%203.5l2.13%202.14-1.42%201.41L3.5%204.93zm12.03%202.13%202.12-2.13%201.43%201.43-2.13%202.12z%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#handling-authentication" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Endurain documentation" class="md-header__button md-logo" aria-label="Endurain documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Endurain documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Authentication
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/endurain-project/endurain" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Endurain documentation" class="md-nav__button md-logo" aria-label="Endurain documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Endurain documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/endurain-project/endurain" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Hosting Guide
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Hosting Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting started easy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/advanced-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting started advanced
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/bare-metal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bare-Metal Installation Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://community-scripts.github.io/ProxmoxVE/scripts?id=endurain&category=Gaming+%26+Leisure" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Proxmox community script
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/maria-to-postgres-migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MariaDB to Postgres migration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Features
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/single-sign-on/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Single Sign-On (SSO)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/sleep-scoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sleep Scoring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Integrations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Integrations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/3rd-party-apps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3rd party apps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/3rd-party-services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3rd party services
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Developer guide
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Developer guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup-dev-env/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup a development environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Authentication
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Authentication
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#token-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Token Handling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Token Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#token-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Token Lifecycle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-specific-token-delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client-Specific Token Delivery
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Flows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication Flows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-login-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard Login Flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oauthsso-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      OAuth/SSO Flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-refresh-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Token Refresh Flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Endpoints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-authentication-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Authentication Endpoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oauthsso-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      OAuth/SSO Endpoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-resource-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Resource Endpoints
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mfa-authentication-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      MFA Authentication Flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MFA Authentication Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-initial-login-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Initial Login Request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-mfa-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: MFA Verification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oauthsso-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      OAuth/SSO Integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OAuth/SSO Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-identity-providers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Identity Providers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oauth-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      OAuth Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linking-accounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linking Accounts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oauth-token-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      OAuth Token Response
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cookie-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cookie Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-scopes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Scopes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Scopes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-scopes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available Scopes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scope-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scope Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-error-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Error Responses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Error Responses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http-status-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP Status Codes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-error-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Error Responses
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-client-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Client Applications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Security
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-oauthsso" class="md-nav__link">
+    <span class="md-ellipsis">
+      For OAuth/SSO
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supported-types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Supported types
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gallery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gallery
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#token-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Token Handling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Token Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#token-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Token Lifecycle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-specific-token-delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client-Specific Token Delivery
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Flows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication Flows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-login-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard Login Flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oauthsso-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      OAuth/SSO Flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-refresh-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Token Refresh Flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Endpoints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-authentication-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Authentication Endpoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oauthsso-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      OAuth/SSO Endpoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-resource-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Resource Endpoints
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mfa-authentication-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      MFA Authentication Flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MFA Authentication Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-initial-login-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Initial Login Request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-mfa-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: MFA Verification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oauthsso-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      OAuth/SSO Integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OAuth/SSO Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-identity-providers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Identity Providers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oauth-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      OAuth Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linking-accounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linking Accounts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oauth-token-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      OAuth Token Response
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cookie-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cookie Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-scopes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Scopes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Scopes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-scopes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available Scopes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scope-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scope Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-error-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Error Responses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Error Responses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http-status-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP Status Codes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-error-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Error Responses
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-client-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Client Applications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Security
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-oauthsso" class="md-nav__link">
+    <span class="md-ellipsis">
+      For OAuth/SSO
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="handling-authentication">Handling authentication</h1>
+<p>Endurain supports integration with other apps through a comprehensive authentication system that includes standard username/password authentication, Multi-Factor Authentication (MFA), OAuth/SSO integration, and JWT-based session management.</p>
+<h2 id="api-requirements">API Requirements</h2>
+<ul>
+<li><strong>Add a header:</strong> Every request must include an <code>X-Client-Type</code> header with either <code>web</code> or <code>mobile</code> as the value. Requests with other values will receive a <code>403</code> error.</li>
+<li><strong>Authorization:</strong> Every request must include an <code>Authorization: Bearer &lt;access token&gt;</code> header with a valid (new or refreshed) access token.</li>
+</ul>
+<h2 id="token-handling">Token Handling</h2>
+<h3 id="token-lifecycle">Token Lifecycle</h3>
+<ul>
+<li>The backend generates an <code>access_token</code> valid for 15 minutes (default) and a <code>refresh_token</code> valid for 7 days (default). This follows the best practice of short-lived and long-lived tokens for authentication sessions.</li>
+<li>The <code>access_token</code> is used for authorization; The <code>refresh_token</code> is used to refresh the <code>access_token</code>.</li>
+<li>Token expiration times can be customized via environment variables (see Configuration section below).</li>
+</ul>
+<h3 id="client-specific-token-delivery">Client-Specific Token Delivery</h3>
+<ul>
+<li><strong>For web apps</strong>: The backend sends access/refresh tokens as HTTP-only cookies:</li>
+<li><code>endurain_access_token</code> (HttpOnly, Secure in production)</li>
+<li><code>endurain_refresh_token</code> (HttpOnly, Secure in production)</li>
+<li><code>endurain_csrf_token</code> (HttpOnly, for CSRF protection)</li>
+<li><strong>For mobile apps</strong>: Tokens are included in the response body as JSON.</li>
+</ul>
+<h2 id="authentication-flows">Authentication Flows</h2>
+<h3 id="standard-login-flow">Standard Login Flow</h3>
+<ol>
+<li>Client sends credentials to <code>/token</code> endpoint</li>
+<li>Backend validates credentials</li>
+<li>If MFA is enabled, backend requests MFA code</li>
+<li>If MFA is disabled or verified, backend generates tokens</li>
+<li>Tokens are delivered based on client type (cookies for web, JSON for mobile)</li>
+</ol>
+<h3 id="oauthsso-flow">OAuth/SSO Flow</h3>
+<ol>
+<li>Client requests list of enabled providers from <code>/identity-providers</code></li>
+<li>Client initiates OAuth by redirecting to <code>/identity-providers/login/{idp_slug}</code></li>
+<li>User authenticates with the OAuth provider</li>
+<li>Provider redirects back to <code>/identity-providers/callback/{idp_slug}</code> with authorization code</li>
+<li>Backend exchanges code for provider tokens and user info</li>
+<li>Backend creates or links user account and generates session tokens</li>
+<li>User is redirected to the app with active session</li>
+</ol>
+<h3 id="token-refresh-flow">Token Refresh Flow</h3>
+<ol>
+<li>When access token expires, client sends refresh token to <code>/refresh</code></li>
+<li>Backend validates refresh token and session</li>
+<li>New access token is generated and returned</li>
+<li>Refresh token may be rotated based on configuration</li>
+</ol>
+<h2 id="api-endpoints">API Endpoints</h2>
+<p>The API is reachable under <code>/api/v1</code>. Below are the authentication-related endpoints. Complete API documentation is available on the backend docs (<code>http://localhost:98/api/v1/docs</code> or <code>http://ip_address:98/api/v1/docs</code> or <code>https://domain/api/v1/docs</code>):</p>
+<h3 id="core-authentication-endpoints">Core Authentication Endpoints</h3>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>Url</th>
+<th>Expected Information</th>
+<th>Rate Limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Authorize</strong></td>
+<td><code>/token</code></td>
+<td><code>FORM</code> with the fields <code>username</code> and <code>password</code>. This will be sent in clear text, use of HTTPS is highly recommended</td>
+<td>5 requests/min per IP</td>
+</tr>
+<tr>
+<td><strong>Refresh Token</strong></td>
+<td><code>/refresh</code></td>
+<td>header <code>Authorization Bearer: &lt;Refresh Token&gt;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Verify MFA</strong></td>
+<td><code>/mfa/verify</code></td>
+<td>JSON <code>{'username': &lt;username&gt;, 'mfa_code': '123456'}</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Logout</strong></td>
+<td><code>/logout</code></td>
+<td>header <code>Authorization Bearer: &lt;Access Token&gt;</code></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="oauthsso-endpoints">OAuth/SSO Endpoints</h3>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>Url</th>
+<th>Expected Information</th>
+<th>Rate Limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Get Enabled Providers</strong></td>
+<td><code>/identity-providers</code></td>
+<td>None (public endpoint)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Initiate OAuth Login</strong></td>
+<td><code>/identity-providers/login/{idp_slug}</code></td>
+<td>Query param: <code>redirect=&lt;path&gt;</code> (optional)</td>
+<td>10 requests/min per IP</td>
+</tr>
+<tr>
+<td><strong>OAuth Callback</strong></td>
+<td><code>/identity-providers/callback/{idp_slug}</code></td>
+<td>Query params: <code>code=&lt;code&gt;</code>, <code>state=&lt;state&gt;</code></td>
+<td>Configurable</td>
+</tr>
+<tr>
+<td><strong>Link IdP to Account</strong></td>
+<td><code>/identity-providers/login/{idp_slug}?link=true</code></td>
+<td>Requires authenticated session</td>
+<td>10 requests/min per IP</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-resource-endpoints">Example Resource Endpoints</h3>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>Url</th>
+<th>Expected Information</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Activity Upload</strong></td>
+<td><code>/activities/create/upload</code></td>
+<td>.gpx, .tcx, .gz or .fit file</td>
+</tr>
+<tr>
+<td><strong>Set Weight</strong></td>
+<td><code>/health/weight</code></td>
+<td>JSON <code>{'weight': &lt;number&gt;, 'created_at': 'yyyy-MM-dd'}</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="mfa-authentication-flow">MFA Authentication Flow</h2>
+<p>When Multi-Factor Authentication (MFA) is enabled for a user, the authentication process requires two steps:</p>
+<h3 id="step-1-initial-login-request">Step 1: Initial Login Request</h3>
+<p>Make a standard login request to <code>/token</code>:</p>
+<p><strong>Request:</strong>
+<div class="highlight"><pre><span></span><code><span class="err">POST /api/v1/token</span>
+<span class="err">Content-Type: application/x-www-form-urlencoded</span>
+<span class="err">X-Client-Type: web|mobile</span>
+
+<span class="err">username=user@example.com&amp;password=userpassword</span>
+</code></pre></div></p>
+<p><strong>Response (when MFA is enabled):</strong></p>
+<ul>
+<li><strong>Web clients</strong>: HTTP 202 Accepted</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;mfa_required&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MFA verification required&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>Mobile clients</strong>: HTTP 200 OK</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;mfa_required&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MFA verification required&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="step-2-mfa-verification">Step 2: MFA Verification</h3>
+<p>Complete the login by providing the MFA code to <code>/mfa/verify</code>:</p>
+<p><strong>Request:</strong>
+<div class="highlight"><pre><span></span><code><span class="err">POST /api/v1/mfa/verify</span>
+<span class="err">Content-Type: application/json</span>
+<span class="err">X-Client-Type: web|mobile</span>
+
+<span class="err">{</span>
+<span class="err">  &quot;username&quot;: &quot;user@example.com&quot;,</span>
+<span class="err">  &quot;mfa_code&quot;: &quot;123456&quot;</span>
+<span class="err">}</span>
+</code></pre></div></p>
+<p><strong>Response (successful verification):</strong></p>
+<ul>
+<li><strong>Web clients</strong>: Tokens are set as HTTP-only cookies</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;session_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;unique_session_id&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>Mobile clients</strong>: Tokens are returned in response body</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;access_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eyJ...&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;refresh_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eyJ...&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;session_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;unique_session_id&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;token_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bearer&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;expires_in&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">900</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="error-handling">Error Handling</h3>
+<ul>
+<li><strong>No pending MFA login</strong>: HTTP 400 Bad Request</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;detail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;No pending MFA login found for this username&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>Invalid MFA code</strong>: HTTP 401 Unauthorized</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;detail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Invalid MFA code&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="important-notes">Important Notes</h3>
+<ul>
+<li>The pending MFA login session is temporary and will expire if not completed within a reasonable time</li>
+<li>After successful MFA verification, the pending login is automatically cleaned up</li>
+<li>The user must still be active at the time of MFA verification</li>
+<li>If no MFA is enabled for the user, the standard single-step authentication flow applies</li>
+</ul>
+<h2 id="oauthsso-integration">OAuth/SSO Integration</h2>
+<h3 id="supported-identity-providers">Supported Identity Providers</h3>
+<p>Endurain supports OAuth/SSO integration with various identity providers out of the box:</p>
+<ul>
+<li>Authelia</li>
+<li>Authentik</li>
+<li>Casdoor</li>
+<li>Keycloak</li>
+<li>Pocket ID</li>
+</ul>
+<p>The system is extensible and can be configured to work with:</p>
+<ul>
+<li>Google</li>
+<li>GitHub</li>
+<li>Microsoft Entra ID</li>
+<li>Others/custom OIDC providers</li>
+</ul>
+<h3 id="oauth-configuration">OAuth Configuration</h3>
+<p>Identity providers must be configured with the following parameters:</p>
+<ul>
+<li><code>client_id</code>: OAuth client identifier</li>
+<li><code>client_secret</code>: OAuth client secret</li>
+<li><code>authorization_endpoint</code>: Provider's authorization URL</li>
+<li><code>token_endpoint</code>: Provider's token exchange URL</li>
+<li><code>userinfo_endpoint</code>: Provider's user information URL</li>
+<li><code>redirect_uri</code>: Callback URL (typically <code>/api/v1/identity-providers/callback/{idp_slug}</code>)</li>
+</ul>
+<h3 id="linking-accounts">Linking Accounts</h3>
+<p>Users can link their Endurain account to an OAuth provider:</p>
+<ol>
+<li>User must be authenticated with a valid session</li>
+<li>Navigate to <code>/identity-providers/login/{idp_slug}?link=true</code></li>
+<li>Authenticate with the identity provider</li>
+<li>Provider is linked to the existing account</li>
+</ol>
+<h3 id="oauth-token-response">OAuth Token Response</h3>
+<p>When authenticating via OAuth, the response format matches the standard authentication:</p>
+<ul>
+<li><strong>Web clients</strong>: Tokens set as HTTP-only cookies, redirected to app</li>
+<li><strong>Mobile clients</strong>: Tokens returned in JSON format</li>
+</ul>
+<h2 id="configuration">Configuration</h2>
+<h3 id="environment-variables">Environment Variables</h3>
+<p>The following environment variables control authentication behavior:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+<th>Default</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SECRET_KEY</code></td>
+<td>Secret key for JWT signing</td>
+<td>-</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>ALGORITHM</code></td>
+<td>JWT signing algorithm</td>
+<td><code>HS256</code></td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>ACCESS_TOKEN_EXPIRE_MINUTES</code></td>
+<td>Access token lifetime in minutes</td>
+<td><code>15</code></td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>REFRESH_TOKEN_EXPIRE_DAYS</code></td>
+<td>Refresh token lifetime in days</td>
+<td><code>7</code></td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>BACKEND_CORS_ORIGINS</code></td>
+<td>Allowed CORS origins</td>
+<td><code>[]</code></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cookie-configuration">Cookie Configuration</h3>
+<p>For web clients, cookies are configured with:</p>
+<ul>
+<li><strong>HttpOnly</strong>: Prevents JavaScript access (security measure)</li>
+<li><strong>Secure</strong>: Only sent over HTTPS in production</li>
+<li><strong>SameSite</strong>: Protection against CSRF attacks</li>
+<li><strong>Domain</strong>: Set to match your application domain</li>
+<li><strong>Path</strong>: Set to <code>/</code> for application-wide access</li>
+</ul>
+<h2 id="security-scopes">Security Scopes</h2>
+<p>Endurain uses OAuth-style scopes to control API access. Each scope controls access to specific resource groups:</p>
+<h3 id="available-scopes">Available Scopes</h3>
+<table>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Description</th>
+<th>Access Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>profile</code></td>
+<td>User profile information</td>
+<td>Read/Write</td>
+</tr>
+<tr>
+<td><code>users:read</code></td>
+<td>Read user data</td>
+<td>Read-only</td>
+</tr>
+<tr>
+<td><code>users:write</code></td>
+<td>Modify user data</td>
+<td>Write</td>
+</tr>
+<tr>
+<td><code>gears:read</code></td>
+<td>Read gear/equipment data</td>
+<td>Read-only</td>
+</tr>
+<tr>
+<td><code>gears:write</code></td>
+<td>Modify gear/equipment data</td>
+<td>Write</td>
+</tr>
+<tr>
+<td><code>activities:read</code></td>
+<td>Read activity data</td>
+<td>Read-only</td>
+</tr>
+<tr>
+<td><code>activities:write</code></td>
+<td>Create/modify activities</td>
+<td>Write</td>
+</tr>
+<tr>
+<td><code>health:read</code></td>
+<td>Read health metrics (weight, sleep, steps)</td>
+<td>Read-only</td>
+</tr>
+<tr>
+<td><code>health:write</code></td>
+<td>Record health metrics</td>
+<td>Write</td>
+</tr>
+<tr>
+<td><code>health_targets:read</code></td>
+<td>Read health targets</td>
+<td>Read-only</td>
+</tr>
+<tr>
+<td><code>health_targets:write</code></td>
+<td>Modify health targets</td>
+<td>Write</td>
+</tr>
+<tr>
+<td><code>sessions:read</code></td>
+<td>View active sessions</td>
+<td>Read-only</td>
+</tr>
+<tr>
+<td><code>sessions:write</code></td>
+<td>Manage sessions</td>
+<td>Write</td>
+</tr>
+<tr>
+<td><code>server_settings:read</code></td>
+<td>View server configuration</td>
+<td>Read-only</td>
+</tr>
+<tr>
+<td><code>server_settings:write</code></td>
+<td>Modify server settings</td>
+<td>Write (Admin)</td>
+</tr>
+<tr>
+<td><code>identity_providers:read</code></td>
+<td>View OAuth providers</td>
+<td>Read-only</td>
+</tr>
+<tr>
+<td><code>identity_providers:write</code></td>
+<td>Configure OAuth providers</td>
+<td>Write (Admin)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scope-usage">Scope Usage</h3>
+<p>Scopes are automatically assigned based on user permissions and are embedded in JWT tokens. API endpoints validate required scopes before processing requests.</p>
+<h2 id="common-error-responses">Common Error Responses</h2>
+<h3 id="http-status-codes">HTTP Status Codes</h3>
+<table>
+<thead>
+<tr>
+<th>Status Code</th>
+<th>Description</th>
+<th>Common Causes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>400 Bad Request</code></td>
+<td>Invalid request format</td>
+<td>Missing required fields, invalid JSON, no pending MFA login</td>
+</tr>
+<tr>
+<td><code>401 Unauthorized</code></td>
+<td>Authentication failed</td>
+<td>Invalid credentials, expired token, invalid MFA code</td>
+</tr>
+<tr>
+<td><code>403 Forbidden</code></td>
+<td>Access denied</td>
+<td>Invalid client type, insufficient permissions, missing required scope</td>
+</tr>
+<tr>
+<td><code>404 Not Found</code></td>
+<td>Resource not found</td>
+<td>Invalid session ID, user not found, endpoint doesn't exist</td>
+</tr>
+<tr>
+<td><code>429 Too Many Requests</code></td>
+<td>Rate limit exceeded</td>
+<td>Too many login attempts, OAuth requests exceeded limit</td>
+</tr>
+<tr>
+<td><code>500 Internal Server Error</code></td>
+<td>Server error</td>
+<td>Database connection issues, configuration errors</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-error-responses">Example Error Responses</h3>
+<p><strong>Invalid Client Type:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;detail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Invalid client type. Must be &#39;web&#39; or &#39;mobile&#39;&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Expired Token:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;detail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Token has expired&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Invalid Credentials:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;detail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Incorrect username or password&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Rate Limit Exceeded:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;detail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Rate limit exceeded. Please try again later.&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Missing Required Scope:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;detail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insufficient permissions. Required scope: activities:write&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="for-client-applications">For Client Applications</h3>
+<ol>
+<li><strong>Always use HTTPS</strong> in production to protect credentials and tokens</li>
+<li><strong>Store tokens securely</strong>:</li>
+<li>Web: Use HTTP-only cookies (handled automatically)</li>
+<li>Mobile: Use secure storage (Keychain on iOS, KeyStore on Android)</li>
+<li><strong>Implement token refresh</strong> before access token expires</li>
+<li><strong>Handle rate limits</strong> with exponential backoff</li>
+<li><strong>Validate SSL certificates</strong> to prevent man-in-the-middle attacks</li>
+<li><strong>Clear tokens on logout</strong> to prevent unauthorized access</li>
+</ol>
+<h3 id="for-security">For Security</h3>
+<ol>
+<li><strong>Never expose <code>SECRET_KEY</code></strong> in client code or version control</li>
+<li><strong>Use strong, randomly generated secrets</strong> for production</li>
+<li><strong>Enable MFA</strong> for enhanced account security</li>
+<li><strong>Monitor failed login attempts</strong> for suspicious activity</li>
+<li><strong>Rotate refresh tokens</strong> periodically for long-lived sessions</li>
+<li><strong>Use appropriate scopes</strong> - request only the permissions needed</li>
+</ol>
+<h3 id="for-oauthsso">For OAuth/SSO</h3>
+<ol>
+<li><strong>Validate state parameter</strong> to prevent CSRF attacks</li>
+<li><strong>Use PKCE</strong> (Proof Key for Code Exchange) for mobile apps</li>
+<li><strong>Implement proper redirect URL validation</strong> to prevent open redirects</li>
+<li><strong>Handle provider errors gracefully</strong> with user-friendly messages</li>
+<li><strong>Support account linking</strong> to allow users to connect multiple providers</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

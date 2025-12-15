@@ -30,6 +30,26 @@
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--alert:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M13%2014h-2V9h2m0%209h-2v-2h2M1%2021h22L12%202z%22/%3E%3C/svg%3E');--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M13%209h-2V7h2m0%2010h-2v-6h2m-1-9A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%206a6%206%200%200%201%206%206c0%202.22-1.21%204.16-3%205.2V19a1%201%200%200%201-1%201h-4a1%201%200%200%201-1-1v-1.8c-1.79-1.04-3-2.98-3-5.2a6%206%200%200%201%206-6m2%2015v1a1%201%200%200%201-1%201h-2a1%201%200%200%201-1-1v-1zm6-10h3v2h-3zM1%2011h3v2H1zM13%201v3h-2V1zM4.92%203.5l2.13%202.14-1.42%201.41L3.5%204.93zm12.03%202.13%202.12-2.13%201.43%201.43-2.13%202.12z%22/%3E%3C/svg%3E');}</style>
+
 
 
     
@@ -567,6 +587,29 @@
   
   
     <li class="md-nav__item">
+      <a href="https://community-scripts.github.io/ProxmoxVE/scripts?id=endurain&category=Gaming+%26+Leisure" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Proxmox community script
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../maria-to-postgres-migration/" class="md-nav__link">
         
   
@@ -627,6 +670,29 @@
             Features
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/single-sign-on/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Single Sign-On (SSO)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -755,9 +821,20 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../developer-guide/" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -766,7 +843,88 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Developer guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer-guide/setup-dev-env/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup a development environment
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer-guide/authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Authentication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer-guide/supported-types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Supported types
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1286,43 +1444,43 @@
 <ol>
 <li><strong>Create a secrets directory with proper permissions:</strong></li>
 </ol>
-<pre><code class="language-bash">mkdir -p secrets
-chmod 700 secrets
-</code></pre>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>secrets
+chmod<span class="w"> </span><span class="m">700</span><span class="w"> </span>secrets
+</code></pre></div>
 <ol>
 <li><strong>Create secret files with strong passwords:</strong></li>
 </ol>
-<pre><code class="language-bash"># Use randomly generated passwords, not hardcoded ones
-echo &quot;$(openssl rand -base64 32)&quot; &gt; secrets/db_password.txt
-echo &quot;$(openssl rand -hex 32)&quot; &gt; secrets/secret_key.txt
-echo &quot;$(python3 -c &quot;from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())&quot;)&quot; &gt; secrets/fernet_key.txt
+<div class="highlight"><pre><span></span><code><span class="c1"># Use randomly generated passwords, not hardcoded ones</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>openssl<span class="w"> </span>rand<span class="w"> </span>-base64<span class="w"> </span><span class="m">32</span><span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>secrets/db_password.txt
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>openssl<span class="w"> </span>rand<span class="w"> </span>-hex<span class="w"> </span><span class="m">32</span><span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>secrets/secret_key.txt
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>python3<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())&quot;</span><span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>secrets/fernet_key.txt
 
-# Set secure file permissions
-chmod 600 secrets/*.txt
-chown $(id -u):$(id -g) secrets/*.txt
-</code></pre>
+<span class="c1"># Set secure file permissions</span>
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>secrets/*.txt
+chown<span class="w"> </span><span class="k">$(</span>id<span class="w"> </span>-u<span class="k">)</span>:<span class="k">$(</span>id<span class="w"> </span>-g<span class="k">)</span><span class="w"> </span>secrets/*.txt
+</code></pre></div>
 <ol>
 <li><strong>Configure docker-compose.yml:</strong></li>
 </ol>
-<pre><code class="language-yaml">services:
-  endurain:
-    environment:
-      - DB_PASSWORD_FILE=/run/secrets/db_password
-      - SECRET_KEY_FILE=/run/secrets/secret_key
-      - FERNET_KEY_FILE=/run/secrets/fernet_key
-    secrets:
-      - db_password
-      - secret_key
-      - fernet_key
+<div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">endurain</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DB_PASSWORD_FILE=/run/secrets/db_password</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SECRET_KEY_FILE=/run/secrets/secret_key</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FERNET_KEY_FILE=/run/secrets/fernet_key</span>
+<span class="w">    </span><span class="nt">secrets</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db_password</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">secret_key</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fernet_key</span>
 
-secrets:
-  db_password:
-    file: ./secrets/db_password.txt
-  secret_key:
-    file: ./secrets/secret_key.txt
-  fernet_key:
-    file: ./secrets/fernet_key.txt
-</code></pre>
+<span class="nt">secrets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">db_password</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./secrets/db_password.txt</span>
+<span class="w">  </span><span class="nt">secret_key</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./secrets/secret_key.txt</span>
+<span class="w">  </span><span class="nt">fernet_key</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./secrets/fernet_key.txt</span>
+</code></pre></div>
 <p><strong>Note</strong>: When using <code>_FILE</code> variants, the original environment variables (e.g., <code>DB_PASSWORD</code>) are not needed. The application will automatically read from the file specified by the <code>_FILE</code> environment variable.</p>
 <h2 id="volumes">Volumes</h2>
 <p>Docker image uses a non-root user, so ensure target folders are not owned by root. Non-root user should use UID and GID 1000. It is recommended to configure the following volumes for data persistence:</p>
