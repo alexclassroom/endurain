@@ -1627,10 +1627,10 @@
 </ol>
 <h3 id="oauthsso-flow">OAuth/SSO Flow</h3>
 <ol>
-<li>Client requests list of enabled providers from <code>/identity-providers</code></li>
-<li>Client initiates OAuth by redirecting to <code>/identity-providers/login/{idp_slug}</code></li>
+<li>Client requests list of enabled providers from <code>/public/idp</code></li>
+<li>Client initiates OAuth by redirecting to <code>/public/idp/login/{idp_slug}</code></li>
 <li>User authenticates with the OAuth provider</li>
-<li>Provider redirects back to <code>/identity-providers/callback/{idp_slug}</code> with authorization code</li>
+<li>Provider redirects back to <code>/public/idp/callback/{idp_slug}</code> with authorization code</li>
 <li>Backend exchanges code for provider tokens and user info</li>
 <li>Backend creates or links user account and generates session tokens</li>
 <li>User is redirected to the app with active session</li>
@@ -1694,25 +1694,25 @@
 <tbody>
 <tr>
 <td><strong>Get Enabled Providers</strong></td>
-<td><code>/identity-providers</code></td>
+<td><code>/public/idp</code></td>
 <td>None (public endpoint)</td>
 <td>-</td>
 </tr>
 <tr>
 <td><strong>Initiate OAuth Login</strong></td>
-<td><code>/identity-providers/login/{idp_slug}</code></td>
+<td><code>/public/idp/login/{idp_slug}</code></td>
 <td>Query param: <code>redirect=&lt;path&gt;</code> (optional)</td>
 <td>10 requests/min per IP</td>
 </tr>
 <tr>
 <td><strong>OAuth Callback</strong></td>
-<td><code>/identity-providers/callback/{idp_slug}</code></td>
+<td><code>/public/idp/callback/{idp_slug}</code></td>
 <td>Query params: <code>code=&lt;code&gt;</code>, <code>state=&lt;state&gt;</code></td>
 <td>Configurable</td>
 </tr>
 <tr>
 <td><strong>Link IdP to Account</strong></td>
-<td><code>/identity-providers/login/{idp_slug}?link=true</code></td>
+<td><code>/profile/idp/{idp_id}/link</code></td>
 <td>Requires authenticated session</td>
 <td>10 requests/min per IP</td>
 </tr>
@@ -1848,13 +1848,13 @@
 <li><code>authorization_endpoint</code>: Provider's authorization URL</li>
 <li><code>token_endpoint</code>: Provider's token exchange URL</li>
 <li><code>userinfo_endpoint</code>: Provider's user information URL</li>
-<li><code>redirect_uri</code>: Callback URL (typically <code>/api/v1/identity-providers/callback/{idp_slug}</code>)</li>
+<li><code>redirect_uri</code>: Callback URL (typically <code>/public/idp/callback/{idp_slug}</code>)</li>
 </ul>
 <h3 id="linking-accounts">Linking Accounts</h3>
 <p>Users can link their Endurain account to an OAuth provider:</p>
 <ol>
 <li>User must be authenticated with a valid session</li>
-<li>Navigate to <code>/identity-providers/login/{idp_slug}?link=true</code></li>
+<li>Navigate to <code>/profile/idp/{idp_id}/link</code></li>
 <li>Authenticate with the identity provider</li>
 <li>Provider is linked to the existing account</li>
 </ol>
