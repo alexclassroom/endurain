@@ -432,6 +432,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#session-timeout-configuration-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session Timeout Configuration (Optional)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#docker-secrets-support" class="md-nav__link">
     <span class="md-ellipsis">
       Docker Secrets Support
@@ -569,7 +578,7 @@
   
   
   <span class="md-ellipsis">
-    Bare-Metal Installation Guide
+    Bare-Metal installation guide
     
   </span>
   
@@ -1003,6 +1012,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#session-timeout-configuration-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session Timeout Configuration (Optional)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#docker-secrets-support" class="md-nav__link">
     <span class="md-ellipsis">
       Docker Secrets Support
@@ -1315,6 +1333,24 @@
 <td>Time in days</td>
 </tr>
 <tr>
+<td>SESSION_IDLE_TIMEOUT_ENABLED</td>
+<td>false</td>
+<td>Yes</td>
+<td>Enforce idle timeouts (supported values are <code>true</code> and <code>false</code>)</td>
+</tr>
+<tr>
+<td>SESSION_IDLE_TIMEOUT_HOURS</td>
+<td>1</td>
+<td>Yes</td>
+<td>Time in hours</td>
+</tr>
+<tr>
+<td>SESSION_ABSOLUTE_TIMEOUT_HOURS</td>
+<td>24</td>
+<td>Yes</td>
+<td>Time in hours</td>
+</tr>
+<tr>
 <td>JAEGER_ENABLED</td>
 <td>false</td>
 <td>Yes</td>
@@ -1348,7 +1384,7 @@
 <td>ENVIRONMENT</td>
 <td>production</td>
 <td>Yes</td>
-<td>"production" and "development" allowed. "development" allows connections from localhost:8080 and localhost:5173 at the CORS level</td>
+<td><code>production</code>, <code>demo</code> and <code>development</code> allowed. <code>development</code> allows connections from localhost:8080 and localhost:5173 at the CORS level. <code>demo</code> equals to <code>production</code> except it does not return user sessions</td>
 </tr>
 <tr>
 <td>SMTP_HOST</td>
@@ -1431,6 +1467,21 @@
 <li>To check npm dependencies used, use npm file (package.json)</li>
 <li>Logo created on Canva</li>
 </ul>
+<h2 id="session-timeout-configuration-optional">Session Timeout Configuration (Optional)</h2>
+<p>By default, Endurain sessions last 7 days without enforcing idle timeouts.
+For enhanced security, you can enable automatic session expiration:</p>
+<p><strong>Environment Variables:</strong></p>
+<ul>
+<li><code>SESSION_IDLE_TIMEOUT_ENABLED</code>: Enable timeout enforcement (default: <code>false</code>)</li>
+<li><code>SESSION_IDLE_TIMEOUT_HOURS</code>: Logout after inactivity (default: <code>1</code>)</li>
+<li><code>SESSION_ABSOLUTE_TIMEOUT_HOURS</code>: Force re-login after duration (default: <code>24</code>)</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">environment</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">SESSION_IDLE_TIMEOUT_ENABLED</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;true&quot;</span>
+<span class="w">  </span><span class="nt">SESSION_IDLE_TIMEOUT_HOURS</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2&quot;</span>
+<span class="w">  </span><span class="nt">SESSION_ABSOLUTE_TIMEOUT_HOURS</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;48&quot;</span>
+</code></pre></div>
 <h2 id="docker-secrets-support">Docker Secrets Support</h2>
 <p>Endurain supports <a href="https://docs.docker.com/compose/how-tos/use-secrets/">Docker secrets</a> for securely managing sensitive environment variables. For the following environment variables, you can use <code>_FILE</code> variants that read the secret from a file instead of storing it directly in environment variables:</p>
 <ul>

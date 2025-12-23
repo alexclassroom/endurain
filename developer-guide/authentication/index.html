@@ -385,7 +385,7 @@
   
   
   <span class="md-ellipsis">
-    Bare-Metal Installation Guide
+    Bare-Metal installation guide
     
   </span>
   
@@ -779,9 +779,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#client-specific-token-delivery" class="md-nav__link">
+  <a href="#oauth-21-token-storage-model-hybrid-approach" class="md-nav__link">
     <span class="md-ellipsis">
-      Client-Specific Token Delivery
+      OAuth 2.1 Token Storage Model (Hybrid Approach)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-delivery-by-client-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Token Delivery by Client Type
     </span>
   </a>
   
@@ -803,9 +812,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#standard-login-flow" class="md-nav__link">
+  <a href="#standard-login-flow-usernamepassword" class="md-nav__link">
     <span class="md-ellipsis">
-      Standard Login Flow
+      Standard Login Flow (Username/Password)
     </span>
   </a>
   
@@ -824,6 +833,15 @@
   <a href="#token-refresh-flow" class="md-nav__link">
     <span class="md-ellipsis">
       Token Refresh Flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refresh-token-rotation-reuse-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refresh Token Rotation &amp; Reuse Detection
     </span>
   </a>
   
@@ -863,6 +881,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#session-management-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session Management Endpoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#example-resource-endpoints" class="md-nav__link">
     <span class="md-ellipsis">
       Example Resource Endpoints
@@ -873,6 +900,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#progressive-account-lockout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Progressive Account Lockout
+    </span>
+  </a>
   
 </li>
       
@@ -917,6 +953,75 @@
   <a href="#important-notes" class="md-nav__link">
     <span class="md-ellipsis">
       Important Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mfa-backup-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      MFA Backup Codes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MFA Backup Codes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backup-code-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backup Code Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-backup-codes-are-generated" class="md-nav__link">
+    <span class="md-ellipsis">
+      When Backup Codes Are Generated
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-endpoints_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Endpoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-code-status-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backup Code Status Response
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regenerate-backup-codes-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regenerate Backup Codes Response
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-backup-codes-for-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Backup Codes for Login
     </span>
   </a>
   
@@ -979,13 +1084,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mobile-sso-implementation-guide" class="md-nav__link">
+  <a href="#mobile-sso-with-pkce" class="md-nav__link">
     <span class="md-ellipsis">
-      Mobile SSO Implementation Guide
+      Mobile SSO with PKCE
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Mobile SSO Implementation Guide">
+    <nav class="md-nav" aria-label="Mobile SSO with PKCE">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -998,73 +1103,82 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#why-use-pkce" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Why Use PKCE?
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-by-step-implementation" class="md-nav__link">
+  <a href="#pkce-flow-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Step-by-Step Implementation
+      PKCE Flow Overview
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Step-by-Step Implementation">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-by-step-pkce-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-Step PKCE Implementation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step PKCE Implementation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1-fetch-available-identity-providers" class="md-nav__link">
+  <a href="#step-1-generate-pkce-code-verifier-and-challenge" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: Fetch Available Identity Providers
+      Step 1: Generate PKCE Code Verifier and Challenge
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2-initialize-webview-and-load-sso-url" class="md-nav__link">
+  <a href="#step-2-initiate-oauth-with-pkce-challenge" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2: Initialize WebView and Load SSO URL
+      Step 2: Initiate OAuth with PKCE Challenge
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-monitor-webview-url-changes" class="md-nav__link">
+  <a href="#step-3-monitor-webview-for-callback" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3: Monitor WebView URL Changes
+      Step 3: Monitor WebView for Callback
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-extract-tokens-from-webview-cookies-store-tokens-securely-and-clean-up-the-webview" class="md-nav__link">
+  <a href="#step-4-exchange-session-for-tokens-pkce-verification" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 4: Extract tokens from WebView Cookies, store tokens securely and clean up the WebView
+      Step 4: Exchange Session for Tokens (PKCE Verification)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-5-make-authenticated-api-requests" class="md-nav__link">
+  <a href="#step-5-store-tokens-securely" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 5: Make Authenticated API Requests
+      Step 5: Store Tokens Securely
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-6-implement-token-refresh" class="md-nav__link">
+  <a href="#step-6-use-tokens-for-api-requests" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 6: Implement Token Refresh
+      Step 6: Use Tokens for API Requests
     </span>
   </a>
   
@@ -1072,6 +1186,15 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Features
+    </span>
+  </a>
   
 </li>
         
@@ -1096,6 +1219,39 @@
       Environment Variables
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Environment Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#token-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Token Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1190,9 +1346,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#for-client-applications" class="md-nav__link">
+  <a href="#for-web-client-applications" class="md-nav__link">
     <span class="md-ellipsis">
-      For Client Applications
+      For Web Client Applications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-mobile-client-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Mobile Client Applications
     </span>
   </a>
   
@@ -1208,9 +1373,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#for-oauthsso" class="md-nav__link">
+  <a href="#for-oauthsso-integration" class="md-nav__link">
     <span class="md-ellipsis">
-      For OAuth/SSO
+      For OAuth/SSO Integration
     </span>
   </a>
   
@@ -1337,9 +1502,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#client-specific-token-delivery" class="md-nav__link">
+  <a href="#oauth-21-token-storage-model-hybrid-approach" class="md-nav__link">
     <span class="md-ellipsis">
-      Client-Specific Token Delivery
+      OAuth 2.1 Token Storage Model (Hybrid Approach)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-delivery-by-client-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Token Delivery by Client Type
     </span>
   </a>
   
@@ -1361,9 +1535,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#standard-login-flow" class="md-nav__link">
+  <a href="#standard-login-flow-usernamepassword" class="md-nav__link">
     <span class="md-ellipsis">
-      Standard Login Flow
+      Standard Login Flow (Username/Password)
     </span>
   </a>
   
@@ -1382,6 +1556,15 @@
   <a href="#token-refresh-flow" class="md-nav__link">
     <span class="md-ellipsis">
       Token Refresh Flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refresh-token-rotation-reuse-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refresh Token Rotation &amp; Reuse Detection
     </span>
   </a>
   
@@ -1421,6 +1604,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#session-management-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session Management Endpoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#example-resource-endpoints" class="md-nav__link">
     <span class="md-ellipsis">
       Example Resource Endpoints
@@ -1431,6 +1623,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#progressive-account-lockout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Progressive Account Lockout
+    </span>
+  </a>
   
 </li>
       
@@ -1475,6 +1676,75 @@
   <a href="#important-notes" class="md-nav__link">
     <span class="md-ellipsis">
       Important Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mfa-backup-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      MFA Backup Codes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MFA Backup Codes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backup-code-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backup Code Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-backup-codes-are-generated" class="md-nav__link">
+    <span class="md-ellipsis">
+      When Backup Codes Are Generated
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-endpoints_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Endpoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-code-status-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backup Code Status Response
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regenerate-backup-codes-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regenerate Backup Codes Response
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-backup-codes-for-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Backup Codes for Login
     </span>
   </a>
   
@@ -1537,13 +1807,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mobile-sso-implementation-guide" class="md-nav__link">
+  <a href="#mobile-sso-with-pkce" class="md-nav__link">
     <span class="md-ellipsis">
-      Mobile SSO Implementation Guide
+      Mobile SSO with PKCE
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Mobile SSO Implementation Guide">
+    <nav class="md-nav" aria-label="Mobile SSO with PKCE">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1556,73 +1826,82 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#why-use-pkce" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Why Use PKCE?
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-by-step-implementation" class="md-nav__link">
+  <a href="#pkce-flow-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Step-by-Step Implementation
+      PKCE Flow Overview
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Step-by-Step Implementation">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-by-step-pkce-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-Step PKCE Implementation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step PKCE Implementation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1-fetch-available-identity-providers" class="md-nav__link">
+  <a href="#step-1-generate-pkce-code-verifier-and-challenge" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: Fetch Available Identity Providers
+      Step 1: Generate PKCE Code Verifier and Challenge
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2-initialize-webview-and-load-sso-url" class="md-nav__link">
+  <a href="#step-2-initiate-oauth-with-pkce-challenge" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2: Initialize WebView and Load SSO URL
+      Step 2: Initiate OAuth with PKCE Challenge
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-monitor-webview-url-changes" class="md-nav__link">
+  <a href="#step-3-monitor-webview-for-callback" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3: Monitor WebView URL Changes
+      Step 3: Monitor WebView for Callback
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-extract-tokens-from-webview-cookies-store-tokens-securely-and-clean-up-the-webview" class="md-nav__link">
+  <a href="#step-4-exchange-session-for-tokens-pkce-verification" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 4: Extract tokens from WebView Cookies, store tokens securely and clean up the WebView
+      Step 4: Exchange Session for Tokens (PKCE Verification)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-5-make-authenticated-api-requests" class="md-nav__link">
+  <a href="#step-5-store-tokens-securely" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 5: Make Authenticated API Requests
+      Step 5: Store Tokens Securely
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-6-implement-token-refresh" class="md-nav__link">
+  <a href="#step-6-use-tokens-for-api-requests" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 6: Implement Token Refresh
+      Step 6: Use Tokens for API Requests
     </span>
   </a>
   
@@ -1630,6 +1909,15 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Features
+    </span>
+  </a>
   
 </li>
         
@@ -1654,6 +1942,39 @@
       Environment Variables
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Environment Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#token-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Token Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1748,9 +2069,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#for-client-applications" class="md-nav__link">
+  <a href="#for-web-client-applications" class="md-nav__link">
     <span class="md-ellipsis">
-      For Client Applications
+      For Web Client Applications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-mobile-client-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Mobile Client Applications
     </span>
   </a>
   
@@ -1766,9 +2096,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#for-oauthsso" class="md-nav__link">
+  <a href="#for-oauthsso-integration" class="md-nav__link">
     <span class="md-ellipsis">
-      For OAuth/SSO
+      For OAuth/SSO Integration
     </span>
   </a>
   
@@ -1799,53 +2129,171 @@
 
 
 <h1 id="handling-authentication">Handling authentication</h1>
-<p>Endurain supports integration with other apps through a comprehensive authentication system that includes standard username/password authentication, Multi-Factor Authentication (MFA), OAuth/SSO integration, and JWT-based session management.</p>
+<p>Endurain supports integration with other apps through a comprehensive OAuth 2.1 compliant authentication system that includes standard username/password authentication, Multi-Factor Authentication (MFA), OAuth/SSO integration, and JWT-based session management with refresh token rotation.</p>
 <h2 id="api-requirements">API Requirements</h2>
 <ul>
-<li><strong>Add a header:</strong> Every request must include an <code>X-Client-Type</code> header with either <code>web</code> or <code>mobile</code> as the value. Requests with other values will receive a <code>403</code> error.</li>
-<li><strong>Authorization:</strong> Every request must include an <code>Authorization: Bearer &lt;access token&gt;</code> header with a valid (new or refreshed) access token.</li>
+<li><strong>Client Type Header:</strong> Every request must include an <code>X-Client-Type</code> header with either <code>web</code> or <code>mobile</code> as the value. Requests with other values will receive a <code>403</code> error.</li>
+<li><strong>Authorization:</strong> Every request must include an <code>Authorization: Bearer &lt;access token&gt;</code> header with a valid access token.</li>
+<li><strong>CSRF Protection (Web Only):</strong> State-changing requests (<code>POST</code>, <code>PUT</code>, <code>DELETE</code>, <code>PATCH</code>) from web clients must include an <code>X-CSRF-Token</code> header.</li>
 </ul>
 <h2 id="token-handling">Token Handling</h2>
 <h3 id="token-lifecycle">Token Lifecycle</h3>
 <ul>
-<li>The backend generates an <code>access_token</code> valid for 15 minutes (default) and a <code>refresh_token</code> valid for 7 days (default). This follows the best practice of short-lived and long-lived tokens for authentication sessions.</li>
-<li>The <code>access_token</code> is used for authorization; The <code>refresh_token</code> is used to refresh the <code>access_token</code>.</li>
+<li>The backend generates an <code>access_token</code> valid for 15 minutes (default) and a <code>refresh_token</code> valid for 7 days (default).</li>
+<li>The <code>access_token</code> is used for authorization; the <code>refresh_token</code> is used to obtain new access tokens.</li>
+<li>A <code>csrf_token</code> is generated for CSRF protection on state-changing requests.</li>
 <li>Token expiration times can be customized via environment variables (see Configuration section below).</li>
 </ul>
-<h3 id="client-specific-token-delivery">Client-Specific Token Delivery</h3>
+<h3 id="oauth-21-token-storage-model-hybrid-approach">OAuth 2.1 Token Storage Model (Hybrid Approach)</h3>
+<p>Endurain implements an OAuth 2.1 compliant hybrid token storage model that provides both security and usability:</p>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Storage Location</th>
+<th>Lifetime</th>
+<th>Security Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Access Token</strong></td>
+<td>In-memory (JavaScript)</td>
+<td>15 minutes</td>
+<td>Short-lived, XSS-resistant (not persisted)</td>
+</tr>
+<tr>
+<td><strong>Refresh Token</strong></td>
+<td>httpOnly cookie</td>
+<td>7 days</td>
+<td>CSRF-protected, auto-sent by browser</td>
+</tr>
+<tr>
+<td><strong>CSRF Token</strong></td>
+<td>In-memory (JavaScript)</td>
+<td>Session</td>
+<td>Prevents CSRF attacks on state-changing requests</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Security Properties:</strong></p>
 <ul>
-<li><strong>For web apps</strong>: The backend sends access/refresh tokens as HTTP-only cookies:</li>
-<li><code>endurain_access_token</code> (HttpOnly, Secure in production)</li>
-<li><code>endurain_refresh_token</code> (HttpOnly, Secure in production)</li>
-<li><code>endurain_csrf_token</code> (HttpOnly, for CSRF protection)</li>
-<li><strong>For mobile apps</strong>: Tokens are included in the response body as JSON.</li>
+<li><strong>XSS Protection:</strong> Access tokens stored in memory cannot be exfiltrated via XSS attacks</li>
+<li><strong>CSRF Protection:</strong> Refresh token in httpOnly cookie + CSRF token header prevents CSRF attacks</li>
+<li><strong>Session Persistence:</strong> Page reload triggers <code>/auth/refresh</code> with httpOnly cookie to restore tokens</li>
+<li><strong>Multi-tab Support:</strong> httpOnly cookie shared across browser tabs</li>
+</ul>
+<h3 id="token-delivery-by-client-type">Token Delivery by Client Type</h3>
+<ul>
+<li>
+<p><strong>For web apps:</strong> </p>
+<ul>
+<li>Access token and CSRF token returned in JSON response body (stored in-memory)</li>
+<li>Refresh token set as httpOnly cookie (<code>endurain_refresh_token</code>)</li>
+<li>On page reload, call <code>/auth/refresh</code> to restore in-memory tokens</li>
+</ul>
+</li>
+<li>
+<p><strong>For mobile apps:</strong> </p>
+<ul>
+<li>All tokens (access, refresh, CSRF) returned in JSON response body</li>
+<li>Store tokens in secure platform storage (iOS Keychain, Android EncryptedSharedPreferences)</li>
+</ul>
+</li>
 </ul>
 <h2 id="authentication-flows">Authentication Flows</h2>
-<h3 id="standard-login-flow">Standard Login Flow</h3>
+<h3 id="standard-login-flow-usernamepassword">Standard Login Flow (Username/Password)</h3>
 <ol>
-<li>Client sends credentials to <code>/token</code> endpoint</li>
-<li>Backend validates credentials</li>
-<li>If MFA is enabled, backend requests MFA code</li>
+<li>Client sends credentials to <code>/auth/login</code> endpoint</li>
+<li>Backend validates credentials and checks for account lockout</li>
+<li>If MFA is enabled, backend returns MFA-required response</li>
 <li>If MFA is disabled or verified, backend generates tokens</li>
-<li>Tokens are delivered based on client type (cookies for web, JSON for mobile)</li>
+<li>Tokens are delivered based on client type:<ul>
+<li><strong>Web:</strong> Access token + CSRF token in response body, refresh token as httpOnly cookie</li>
+<li><strong>Mobile:</strong> All tokens in response body</li>
+</ul>
+</li>
 </ol>
 <h3 id="oauthsso-flow">OAuth/SSO Flow</h3>
 <ol>
 <li>Client requests list of enabled providers from <code>/public/idp</code></li>
-<li>Client initiates OAuth by redirecting to <code>/public/idp/login/{idp_slug}</code></li>
+<li>Client initiates OAuth by redirecting to <code>/public/idp/login/{idp_slug}</code> with PKCE challenge</li>
 <li>User authenticates with the OAuth provider</li>
 <li>Provider redirects back to <code>/public/idp/callback/{idp_slug}</code> with authorization code</li>
 <li>Backend exchanges code for provider tokens and user info</li>
-<li>Backend creates or links user account and generates session tokens</li>
-<li>User is redirected to the app with active session</li>
+<li>Backend creates or links user account and generates session tokens based on client type:<ul>
+<li><strong>Web clients:</strong> Redirected to app with tokens set automatically</li>
+<li><strong>Mobile clients:</strong> Exchange session for tokens via PKCE token exchange endpoint <code>/public/idp/session/{session_id}/tokens</code></li>
+</ul>
+</li>
 </ol>
 <h3 id="token-refresh-flow">Token Refresh Flow</h3>
+<p>The token refresh flow implements OAuth 2.1 compliant refresh token rotation:</p>
 <ol>
-<li>When access token expires, client sends refresh token to <code>/refresh</code></li>
-<li>Backend validates refresh token and session</li>
-<li>New access token is generated and returned</li>
-<li>Refresh token may be rotated based on configuration</li>
+<li>When access token expires, client calls <code>POST /auth/refresh</code>:<ul>
+<li><strong>Web clients:</strong> Include <code>X-CSRF-Token</code> header with current CSRF token</li>
+<li><strong>Mobile clients:</strong> Include refresh token in request</li>
+</ul>
+</li>
+<li>Backend validates refresh token and session, checks for token reuse<ul>
+<li><strong>If token reuse detected:</strong> Entire token family is invalidated (security breach response)</li>
+</ul>
+</li>
+<li>New tokens are generated (access, refresh, CSRF) with refresh token rotation</li>
+<li>Old refresh token is stored for reuse detection (grace period: 30 seconds)</li>
+<li>Response includes new tokens; web clients receive new httpOnly cookie</li>
 </ol>
+<p><strong>Token Refresh Request (Web):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="err">POST /api/v1/auth/refresh</span>
+<span class="err">X-Client-Type: web</span>
+<span class="err">X-CSRF-Token: {current_csrf_token}</span>
+<span class="err">Cookie: endurain_refresh_token={refresh_token}</span>
+</code></pre></div>
+<p><strong>Token Refresh Response:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;session_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;access_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eyJ...&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;csrf_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;new_csrf_token&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;token_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bearer&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;expires_in&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1734567890</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="refresh-token-rotation-reuse-detection">Refresh Token Rotation &amp; Reuse Detection</h3>
+<p>Endurain implements automatic refresh token rotation with reuse detection to prevent token theft:</p>
+<table>
+<thead>
+<tr>
+<th>Security Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Automatic Rotation</strong></td>
+<td>New refresh token issued on every <code>/auth/refresh</code> call</td>
+</tr>
+<tr>
+<td><strong>Token Family Tracking</strong></td>
+<td>All tokens in a session share a <code>token_family_id</code></td>
+</tr>
+<tr>
+<td><strong>Reuse Detection</strong></td>
+<td>Old tokens are stored and monitored for reuse</td>
+</tr>
+<tr>
+<td><strong>Grace Period</strong></td>
+<td>30-second window allows for network retry scenarios</td>
+</tr>
+<tr>
+<td><strong>Family Invalidation</strong></td>
+<td>If reuse detected, ALL tokens in family are invalidated</td>
+</tr>
+<tr>
+<td><strong>Rotation Count</strong></td>
+<td>Tracks number of rotations for audit purposes</td>
+</tr>
+</tbody>
+</table>
 <h2 id="api-endpoints">API Endpoints</h2>
 <p>The API is reachable under <code>/api/v1</code>. Below are the authentication-related endpoints. Complete API documentation is available on the backend docs (<code>http://localhost:98/api/v1/docs</code> or <code>http://ip_address:98/api/v1/docs</code> or <code>https://domain/api/v1/docs</code>):</p>
 <h3 id="core-authentication-endpoints">Core Authentication Endpoints</h3>
@@ -1861,26 +2309,26 @@
 <tbody>
 <tr>
 <td><strong>Authorize</strong></td>
-<td><code>/token</code></td>
-<td><code>FORM</code> with the fields <code>username</code> and <code>password</code>. This will be sent in clear text, use of HTTPS is highly recommended</td>
-<td>5 requests/min per IP</td>
+<td><code>/auth/login</code></td>
+<td><code>FORM</code> with the fields <code>username</code> and <code>password</code>. HTTPS highly recommended</td>
+<td>3 requests/min per IP</td>
 </tr>
 <tr>
 <td><strong>Refresh Token</strong></td>
-<td><code>/refresh</code></td>
-<td>header <code>Authorization Bearer: &lt;Refresh Token&gt;</code></td>
+<td><code>/auth/refresh</code></td>
+<td>Cookie: <code>endurain_refresh_token</code>, Header: <code>X-CSRF-Token</code> (web only)</td>
 <td>-</td>
 </tr>
 <tr>
 <td><strong>Verify MFA</strong></td>
-<td><code>/mfa/verify</code></td>
+<td><code>/auth/mfa/verify</code></td>
 <td>JSON <code>{'username': &lt;username&gt;, 'mfa_code': '123456'}</code></td>
-<td>-</td>
+<td>5 requests/min per IP</td>
 </tr>
 <tr>
 <td><strong>Logout</strong></td>
-<td><code>/logout</code></td>
-<td>header <code>Authorization Bearer: &lt;Access Token&gt;</code></td>
+<td><code>/auth/logout</code></td>
+<td>Header: <code>Authorization: Bearer &lt;Access Token&gt;</code></td>
 <td>-</td>
 </tr>
 </tbody>
@@ -1905,20 +2353,48 @@
 <tr>
 <td><strong>Initiate OAuth Login</strong></td>
 <td><code>/public/idp/login/{idp_slug}</code></td>
-<td>Query param: <code>redirect=&lt;path&gt;</code> (optional)</td>
+<td>Query params: <code>redirect</code>, <code>code_challenge</code>, <code>code_challenge_method</code></td>
 <td>10 requests/min per IP</td>
 </tr>
 <tr>
 <td><strong>OAuth Callback</strong></td>
 <td><code>/public/idp/callback/{idp_slug}</code></td>
 <td>Query params: <code>code=&lt;code&gt;</code>, <code>state=&lt;state&gt;</code></td>
-<td>Configurable</td>
+<td>10 requests/min per IP</td>
+</tr>
+<tr>
+<td><strong>Token Exchange (PKCE)</strong></td>
+<td><code>/public/idp/session/{session_id}/tokens</code></td>
+<td>JSON: <code>{"code_verifier": "&lt;verifier&gt;"}</code></td>
+<td>10 requests/min per IP</td>
 </tr>
 <tr>
 <td><strong>Link IdP to Account</strong></td>
 <td><code>/profile/idp/{idp_id}/link</code></td>
 <td>Requires authenticated session</td>
 <td>10 requests/min per IP</td>
+</tr>
+</tbody>
+</table>
+<h3 id="session-management-endpoints">Session Management Endpoints</h3>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>Url</th>
+<th>Expected Information</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Get User Sessions</strong></td>
+<td><code>/sessions/user/{user_id}</code></td>
+<td>Header: <code>Authorization: Bearer &lt;Access Token&gt;</code></td>
+</tr>
+<tr>
+<td><strong>Delete Session</strong></td>
+<td><code>/sessions/{session_id}/user/{user_id}</code></td>
+<td>Header: <code>Authorization: Bearer &lt;Access Token&gt;</code></td>
 </tr>
 </tbody>
 </table>
@@ -1944,12 +2420,43 @@
 </tr>
 </tbody>
 </table>
+<h2 id="progressive-account-lockout">Progressive Account Lockout</h2>
+<p>Endurain implements progressive brute-force protection to prevent credential stuffing attacks:</p>
+<table>
+<thead>
+<tr>
+<th>Failed Attempts</th>
+<th>Lockout Duration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5 failures</td>
+<td>5 minutes</td>
+</tr>
+<tr>
+<td>10 failures</td>
+<td>30 minutes</td>
+</tr>
+<tr>
+<td>20 failures</td>
+<td>24 hours</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Features:</strong></p>
+<ul>
+<li>Per-username tracking prevents targeted attacks</li>
+<li>Lockout persists through MFA flow (prevents bypass)</li>
+<li>Counter resets on successful authentication</li>
+<li>Graceful error messages with remaining lockout time</li>
+</ul>
 <h2 id="mfa-authentication-flow">MFA Authentication Flow</h2>
 <p>When Multi-Factor Authentication (MFA) is enabled for a user, the authentication process requires two steps:</p>
 <h3 id="step-1-initial-login-request">Step 1: Initial Login Request</h3>
-<p>Make a standard login request to <code>/token</code>:</p>
+<p>Make a standard login request to <code>/auth/login</code>:</p>
 <p><strong>Request:</strong>
-<div class="highlight"><pre><span></span><code><span class="err">POST /api/v1/token</span>
+<div class="highlight"><pre><span></span><code><span class="err">POST /api/v1/auth/login</span>
 <span class="err">Content-Type: application/x-www-form-urlencoded</span>
 <span class="err">X-Client-Type: web|mobile</span>
 
@@ -1975,9 +2482,9 @@
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="step-2-mfa-verification">Step 2: MFA Verification</h3>
-<p>Complete the login by providing the MFA code to <code>/mfa/verify</code>:</p>
+<p>Complete the login by providing the MFA code (TOTP or backup code) to <code>/auth/mfa/verify</code>:</p>
 <p><strong>Request:</strong>
-<div class="highlight"><pre><span></span><code><span class="err">POST /api/v1/mfa/verify</span>
+<div class="highlight"><pre><span></span><code><span class="err">POST /api/v1/auth/mfa/verify</span>
 <span class="err">Content-Type: application/json</span>
 <span class="err">X-Client-Type: web|mobile</span>
 
@@ -1986,23 +2493,32 @@
 <span class="err">  &quot;mfa_code&quot;: &quot;123456&quot;</span>
 <span class="err">}</span>
 </code></pre></div></p>
+<div class="admonition tip">
+<p class="admonition-title">Backup Code Format</p>
+<p>Users can also use a backup code instead of a TOTP code. Backup codes are in <code>XXXX-XXXX</code> format (e.g., <code>A3K9-7BDF</code>). See <a href="#mfa-backup-codes">MFA Backup Codes</a> for details.</p>
+</div>
 <p><strong>Response (successful verification):</strong></p>
 <ul>
-<li><strong>Web clients</strong>: Tokens are set as HTTP-only cookies</li>
+<li><strong>Web clients</strong>: Access token and CSRF token in response body, refresh token as httpOnly cookie</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;session_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;unique_session_id&quot;</span>
+<span class="w">  </span><span class="nt">&quot;session_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;unique_session_id&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;access_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eyJ...&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;csrf_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;abc123...&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;token_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bearer&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;expires_in&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1734567890</span>
 <span class="p">}</span>
 </code></pre></div>
 <ul>
-<li><strong>Mobile clients</strong>: Tokens are returned in response body</li>
+<li><strong>Mobile clients</strong>: All tokens returned in response body</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;session_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;unique_session_id&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;access_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eyJ...&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;refresh_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eyJ...&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;session_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;unique_session_id&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;token_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bearer&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;expires_in&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">900</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;csrf_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;abc123...&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;token_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bearer&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;expires_in&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1734567890</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="error-handling">Error Handling</h3>
@@ -2014,10 +2530,17 @@
 <span class="p">}</span>
 </code></pre></div>
 <ul>
-<li><strong>Invalid MFA code</strong>: HTTP 401 Unauthorized</li>
+<li><strong>Invalid MFA code</strong>: HTTP 400 Bad Request</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;detail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Invalid MFA code&quot;</span>
+<span class="w">  </span><span class="nt">&quot;detail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Invalid MFA code. Failed attempts: 1&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>Account locked out (too many failures)</strong>: HTTP 429 Too Many Requests</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;detail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Too many failed MFA attempts. Account locked for 300 seconds.&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="important-notes">Important Notes</h3>
@@ -2027,6 +2550,84 @@
 <li>The user must still be active at the time of MFA verification</li>
 <li>If no MFA is enabled for the user, the standard single-step authentication flow applies</li>
 </ul>
+<h2 id="mfa-backup-codes">MFA Backup Codes</h2>
+<p>Backup codes provide a recovery mechanism when users lose access to their authenticator app. When MFA is enabled, users receive 10 one-time backup codes that can be used instead of TOTP codes.</p>
+<h3 id="backup-code-format">Backup Code Format</h3>
+<ul>
+<li>Format: <code>XXXX-XXXX</code> (8 alphanumeric characters with hyphen)</li>
+<li>Example: <code>A3K9-7BDF</code></li>
+<li>Characters: Uppercase letters and digits (excluding ambiguous: 0, O, 1, I)</li>
+<li>One-time use: Each code can only be used once</li>
+</ul>
+<h3 id="when-backup-codes-are-generated">When Backup Codes Are Generated</h3>
+<ol>
+<li><strong>Automatically on MFA Enable</strong>: When a user enables MFA, 10 backup codes are generated and returned in the response</li>
+<li><strong>Manual Regeneration</strong>: Users can regenerate all backup codes via <code>POST /profile/mfa/backup-codes</code> (invalidates all previous codes)</li>
+</ol>
+<h3 id="api-endpoints_1">API Endpoints</h3>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>URL</th>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Get Backup Code Status</strong></td>
+<td><code>/profile/mfa/backup-codes/status</code></td>
+<td>GET</td>
+<td>Returns count of unused/used codes</td>
+</tr>
+<tr>
+<td><strong>Regenerate Backup Codes</strong></td>
+<td><code>/profile/mfa/backup-codes</code></td>
+<td>POST</td>
+<td>Generates new codes (invalidates old)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="backup-code-status-response">Backup Code Status Response</h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;has_codes&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;total&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;unused&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;used&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-12-21T10:30:00Z&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="regenerate-backup-codes-response">Regenerate Backup Codes Response</h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;codes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;A3K9-7BDF&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;X2M5-9NPQ&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;...&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-12-21T10:30:00Z&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="using-backup-codes-for-login">Using Backup Codes for Login</h3>
+<p>Backup codes can be used in the MFA verification step instead of TOTP codes:</p>
+<div class="highlight"><pre><span></span><code><span class="err">POST /api/v1/auth/mfa/verify</span>
+<span class="err">Content-Type: application/json</span>
+<span class="err">X-Client-Type: web|mobile</span>
+
+<span class="err">{</span>
+<span class="err">  &quot;username&quot;: &quot;user@example.com&quot;,</span>
+<span class="err">  &quot;mfa_code&quot;: &quot;A3K9-7BDF&quot;</span>
+<span class="err">}</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<ul>
+<li>Backup codes are shown only once when generated - users must save them securely</li>
+<li>Each backup code can only be used once</li>
+<li>Regenerating codes invalidates ALL previous backup codes</li>
+<li>Store backup codes in a secure location separate from your authenticator device</li>
+</ul>
+</div>
 <h2 id="oauthsso-integration">OAuth/SSO Integration</h2>
 <h3 id="supported-identity-providers">Supported Identity Providers</h3>
 <p>Endurain supports OAuth/SSO integration with various identity providers out of the box:</p>
@@ -2066,105 +2667,223 @@
 <p>When authenticating via OAuth, the response format matches the standard authentication:</p>
 <ul>
 <li><strong>Web clients</strong>: Tokens set as HTTP-only cookies, redirected to app</li>
-<li><strong>Mobile clients using WebView</strong>: Tokens set as HTTP-only cookies in WebView, redirected to app</li>
+<li><strong>Mobile clients</strong>: Must use PKCE flow (see <a href="#mobile-sso-with-pkce">Mobile SSO with PKCE</a> below)</li>
 </ul>
-<div class="admonition warning">
-<p class="admonition-title">Mobile clients using WebView</p>
-<p>Mobile apps must use WebView for OAuth/SSO flows to properly handle redirects and cookies. Tokens returned in JSON format is not currently supported for SSO.</p>
+<div class="admonition info">
+<p class="admonition-title">Mobile OAuth/SSO</p>
+<p>Mobile apps must use the PKCE flow for OAuth/SSO authentication. This provides enhanced security and a cleaner separation between the WebView and native app.</p>
 </div>
-<h2 id="mobile-sso-implementation-guide">Mobile SSO Implementation Guide</h2>
+<h2 id="mobile-sso-with-pkce">Mobile SSO with PKCE</h2>
 <h3 id="overview">Overview</h3>
-<p>Mobile applications must use an embedded WebView (or in-app browser) to handle OAuth/SSO authentication. The flow leverages browser-based redirects and cookie storage that are part of the OAuth 2.0 standard.</p>
-<h3 id="prerequisites">Prerequisites</h3>
+<p>PKCE (Proof Key for Code Exchange, RFC 7636) is required for mobile OAuth/SSO authentication. It provides enhanced security by eliminating the need to extract tokens from WebView cookies, preventing authorization code interception attacks, and enabling a cleaner separation between the WebView and native app.</p>
+<h3 id="why-use-pkce">Why Use PKCE?</h3>
+<table>
+<thead>
+<tr>
+<th>Traditional WebView Flow</th>
+<th>PKCE Flow</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Extract tokens from cookies</td>
+<td>Tokens delivered via secure API</td>
+</tr>
+<tr>
+<td>Cookies may leak across contexts</td>
+<td>No cookie extraction needed</td>
+</tr>
+<tr>
+<td>Complex WebView cookie management</td>
+<td>Simple token exchange</td>
+</tr>
+<tr>
+<td>Potential timing issues</td>
+<td>Atomic token exchange</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pkce-flow-overview">PKCE Flow Overview</h3>
+<div class="highlight"><pre><span></span><code>┌─────────────┐     ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+│  Mobile App │     │   Backend   │     │   WebView   │     │     IdP     │
+└──────┬──────┘     └──────┬──────┘     └──────┬──────┘     └──────┬──────┘
+       │                   │                   │                   │
+       │ Generate verifier │                   │                   │
+       │ &amp; challenge       │                   │                   │
+       │──────────────────&gt;│                   │                   │
+       │                   │                   │                   │
+       │     Open WebView with challenge       │                   │
+       │──────────────────────────────────────&gt;│                   │
+       │                   │                   │                   │
+       │                   │      Redirect to IdP                  │
+       │                   │──────────────────────────────────────&gt;│
+       │                   │                   │                   │
+       │                   │                   │   User logs in    │
+       │                   │                   │&lt;─────────────────&gt;│
+       │                   │                   │                   │
+       │                   │   Callback with code &amp; state          │
+       │                   │&lt;──────────────────────────────────────│
+       │                   │                   │                   │
+       │     Redirect with session_id          │                   │
+       │&lt;──────────────────────────────────────│                   │
+       │                   │                   │                   │
+       │ POST token exchange with verifier     │                   │
+       │──────────────────&gt;│                   │                   │
+       │                   │                   │                   │
+       │   Return tokens   │                   │                   │
+       │&lt;──────────────────│                   │                   │
+       │                   │                   │                   │
+</code></pre></div>
+<h3 id="step-by-step-pkce-implementation">Step-by-Step PKCE Implementation</h3>
+<h4 id="step-1-generate-pkce-code-verifier-and-challenge">Step 1: Generate PKCE Code Verifier and Challenge</h4>
+<p>Before initiating the OAuth flow, generate a cryptographically random code verifier and compute its SHA256 challenge:</p>
+<p><strong>Code Verifier Requirements (RFC 7636):</strong></p>
 <ul>
-<li>WebView component that supports:<ul>
-<li>Cookie storage and management</li>
-<li>JavaScript execution</li>
-<li>URL interception/monitoring</li>
-<li>Custom headers (for subsequent API calls)</li>
+<li>Length: 43-128 characters</li>
+<li>Characters: <code>A-Z</code>, <code>a-z</code>, <code>0-9</code>, <code>-</code>, <code>.</code>, <code>_</code>, <code>~</code></li>
+<li>Cryptographically random</li>
 </ul>
-</li>
-<li>Secure storage for tokens (Keychain on iOS, KeyStore on Android)</li>
-</ul>
-<h3 id="step-by-step-implementation">Step-by-Step Implementation</h3>
-<h4 id="step-1-fetch-available-identity-providers">Step 1: Fetch Available Identity Providers</h4>
-<p>Before presenting SSO options to users, fetch the list of enabled providers:</p>
-<p><strong>Request:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="err">GET /api/v1/public/idp</span>
+<p><strong>Code Challenge Computation:</strong></p>
+<div class="highlight"><pre><span></span><code>code_challenge = BASE64URL(SHA256(code_verifier))
 </code></pre></div>
-<p><strong>Response:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="p">[</span>
-<span class="w">  </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Keycloak&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;slug&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;keycloak&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;icon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;keycloak&quot;</span>
-<span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Pocket ID&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;slug&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pocket-id&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;icon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pocketid&quot;</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">]</span>
-</code></pre></div>
-<h4 id="step-2-initialize-webview-and-load-sso-url">Step 2: Initialize WebView and Load SSO URL</h4>
-<p>When user selects an SSO provider, open a WebView with the SSO initiation URL:</p>
+<h4 id="step-2-initiate-oauth-with-pkce-challenge">Step 2: Initiate OAuth with PKCE Challenge</h4>
+<p>Open a WebView with the SSO URL including PKCE parameters:</p>
 <p><strong>URL to Load:</strong></p>
-<div class="highlight"><pre><span></span><code>https://your-endurain-instance.com/api/v1/public/idp/login/{idp_slug}?redirect=/dashboard
+<div class="highlight"><pre><span></span><code><span class="err">https://your-endurain-instance.com/api/v1/public/idp/login/{idp_slug}?code_challenge={challenge}&amp;code_challenge_method=S256&amp;redirect=/dashboard</span>
 </code></pre></div>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>{idp_slug}</code>: The provider slug from Step 1 (e.g., "google", "keycloak")</li>
-<li><code>redirect</code> (optional): Frontend path to navigate to after successful login</li>
-</ul>
-<p><strong>What Happens:</strong></p>
-<ol>
-<li>Backend generates OAuth state and authorization URL</li>
-<li>WebView redirects to the identity provider's login page</li>
-<li>User authenticates with the provider (enters credentials, 2FA, etc.)</li>
-</ol>
-<h4 id="step-3-monitor-webview-url-changes">Step 3: Monitor WebView URL Changes</h4>
-<p>Set up URL interception to detect when the OAuth callback completes:</p>
-<p><strong>URLs to Monitor:</strong></p>
-<ul>
-<li>Success: <code>https://your-endurain-instance.com/login?sso=success&amp;session_id={uuid}</code></li>
-<li>Success with redirect: <code>https://your-endurain-instance.com/login?sso=success&amp;session_id={uuid}&amp;redirect=/dashboard</code></li>
-<li>Error: <code>https://your-endurain-instance.com/login?error=sso_failed</code></li>
-</ul>
-<h4 id="step-4-extract-tokens-from-webview-cookies-store-tokens-securely-and-clean-up-the-webview">Step 4: Extract tokens from WebView Cookies, store tokens securely and clean up the WebView</h4>
-<p>When SSO succeeds, extract authentication tokens from the WebView's cookie store and store them securely:</p>
-<p><strong>Cookies to Extract:</strong></p>
-<ul>
-<li><code>endurain_access_token</code>: JWT access token (15 min expiry)</li>
-<li><code>endurain_refresh_token</code>: JWT refresh token (7 day expiry)</li>
-</ul>
-<h4 id="step-5-make-authenticated-api-requests">Step 5: Make Authenticated API Requests</h4>
-<p>Use extracted tokens for subsequent API calls with the required headers:</p>
-<p><strong>Required Headers:</strong></p>
-<ul>
-<li><code>Authorization: Bearer {access_token}</code></li>
-<li><code>X-Client-Type: mobile</code></li>
-</ul>
-<h4 id="step-6-implement-token-refresh">Step 6: Implement Token Refresh</h4>
-<p>Access tokens expire after 15 minutes. Implement automatic refresh logic:</p>
-<p><strong>Refresh Request:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="err">POST /api/v1/refresh</span>
-<span class="err">Authorization: Bearer {refresh_token}</span>
+<p><strong>Query Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>code_challenge</code></td>
+<td>Yes (PKCE)</td>
+<td>Base64url-encoded SHA256 hash of code_verifier</td>
+</tr>
+<tr>
+<td><code>code_challenge_method</code></td>
+<td>Yes (PKCE)</td>
+<td>Must be <code>S256</code></td>
+</tr>
+<tr>
+<td><code>redirect</code></td>
+<td>No</td>
+<td>Frontend path after successful login</td>
+</tr>
+</tbody>
+</table>
+<h4 id="step-3-monitor-webview-for-callback">Step 3: Monitor WebView for Callback</h4>
+<p>The OAuth flow proceeds as normal. Monitor the WebView URL for the success redirect:</p>
+<p><strong>Success URL Pattern:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="err">https://your-endurain-instance.com/login?sso=success&amp;session_id={uuid}&amp;redirect=/dashboard</span>
+</code></pre></div>
+<p>Extract the <code>session_id</code> from the URL - this is needed for token exchange.</p>
+<h4 id="step-4-exchange-session-for-tokens-pkce-verification">Step 4: Exchange Session for Tokens (PKCE Verification)</h4>
+<p>After obtaining the <code>session_id</code>, close the WebView and exchange it for tokens using the code verifier:</p>
+<p><strong>Token Exchange Request:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="err">POST /api/v1/public/idp/session/{session_id}/tokens</span>
+<span class="err">Content-Type: application/json</span>
 <span class="err">X-Client-Type: mobile</span>
+
+<span class="err">{</span>
+<span class="err">  &quot;code_verifier&quot;: &quot;dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk&quot;</span>
+<span class="err">}</span>
 </code></pre></div>
-<p><strong>Response:</strong></p>
+<p><strong>Successful Response (HTTP 200):</strong></p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;access_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eyJ...&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;refresh_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eyJ...&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;session_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;token_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bearer&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;expires_in&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">900</span>
+<span class="w">  </span><span class="nt">&quot;access_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;refresh_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;csrf_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;abc123def456...&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;expires_in&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">900</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;token_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bearer&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
+<p><strong>Error Responses:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Error</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>400</td>
+<td>Invalid code_verifier</td>
+<td>Verifier doesn't match the challenge</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Session not found</td>
+<td>Invalid session_id or not a PKCE flow</td>
+</tr>
+<tr>
+<td>409</td>
+<td>Tokens already exchanged</td>
+<td>Replay attack prevention</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Rate limit exceeded</td>
+<td>Max 10 requests/minute per IP</td>
+</tr>
+</tbody>
+</table>
+<h4 id="step-5-store-tokens-securely">Step 5: Store Tokens Securely</h4>
+<p>Store the received tokens in secure platform storage:</p>
+<ul>
+<li><strong>iOS</strong>: Keychain Services</li>
+<li><strong>Android</strong>: EncryptedSharedPreferences or Android Keystore</li>
+</ul>
+<h4 id="step-6-use-tokens-for-api-requests">Step 6: Use Tokens for API Requests</h4>
+<p>Use the tokens for authenticated API calls:</p>
+<div class="highlight"><pre><span></span><code><span class="err">GET /api/v1/activities</span>
+<span class="err">Authorization: Bearer {access_token}</span>
+<span class="err">X-Client-Type: mobile</span>
+<span class="err">X-CSRF-Token: {csrf_token}</span>
+</code></pre></div>
+<h3 id="security-features">Security Features</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PKCE S256</strong></td>
+<td>SHA256 challenge prevents code interception</td>
+</tr>
+<tr>
+<td><strong>One-time exchange</strong></td>
+<td>Tokens can only be exchanged once per session</td>
+</tr>
+<tr>
+<td><strong>10-minute expiry</strong></td>
+<td>OAuth state expires after 10 minutes</td>
+</tr>
+<tr>
+<td><strong>Rate limiting</strong></td>
+<td>10 token exchange requests per minute</td>
+</tr>
+<tr>
+<td><strong>Session linking</strong></td>
+<td>Session is cryptographically bound to OAuth state</td>
+</tr>
+</tbody>
+</table>
 <h2 id="configuration">Configuration</h2>
 <h3 id="environment-variables">Environment Variables</h3>
 <p>The following environment variables control authentication behavior:</p>
+<h4 id="token-configuration">Token Configuration</h4>
 <table>
 <thead>
 <tr>
@@ -2177,7 +2896,7 @@
 <tbody>
 <tr>
 <td><code>SECRET_KEY</code></td>
-<td>Secret key for JWT signing</td>
+<td>Secret key for JWT signing (min 32 characters recommended)</td>
 <td>-</td>
 <td>Yes</td>
 </tr>
@@ -2199,23 +2918,102 @@
 <td><code>7</code></td>
 <td>No</td>
 </tr>
+</tbody>
+</table>
+<h4 id="session-configuration">Session Configuration</h4>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+<th>Default</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SESSION_IDLE_TIMEOUT_ENABLED</code></td>
+<td>Enable session idle timeout</td>
+<td><code>false</code></td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>SESSION_IDLE_TIMEOUT_HOURS</code></td>
+<td>Hours of inactivity before session expires</td>
+<td><code>1</code></td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>SESSION_ABSOLUTE_TIMEOUT_HOURS</code></td>
+<td>Maximum session lifetime in hours</td>
+<td><code>24</code></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h4 id="security-configuration">Security Configuration</h4>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+<th>Default</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td><code>BACKEND_CORS_ORIGINS</code></td>
-<td>Allowed CORS origins</td>
+<td>Allowed CORS origins (JSON array)</td>
 <td><code>[]</code></td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>FRONTEND_PROTOCOL</code></td>
+<td>Protocol for cookie security (<code>http</code> or <code>https</code>)</td>
+<td><code>http</code></td>
 <td>No</td>
 </tr>
 </tbody>
 </table>
 <h3 id="cookie-configuration">Cookie Configuration</h3>
-<p>For web clients, cookies are configured with:</p>
-<ul>
-<li><strong>HttpOnly</strong>: Prevents JavaScript access (security measure)</li>
-<li><strong>Secure</strong>: Only sent over HTTPS in production</li>
-<li><strong>SameSite</strong>: Protection against CSRF attacks</li>
-<li><strong>Domain</strong>: Set to match your application domain</li>
-<li><strong>Path</strong>: Set to <code>/</code> for application-wide access</li>
-</ul>
+<p>For web clients, the refresh token cookie is configured with:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>HttpOnly</strong></td>
+<td><code>true</code></td>
+<td>Prevents JavaScript access (XSS protection)</td>
+</tr>
+<tr>
+<td><strong>Secure</strong></td>
+<td><code>true</code> (in production)</td>
+<td>Only sent over HTTPS</td>
+</tr>
+<tr>
+<td><strong>SameSite</strong></td>
+<td><code>Strict</code></td>
+<td>Prevents CSRF attacks</td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>/</code></td>
+<td>Application-wide access</td>
+</tr>
+<tr>
+<td><strong>Expires</strong></td>
+<td>7 days (default)</td>
+<td>Matches refresh token lifetime</td>
+</tr>
+</tbody>
+</table>
 <h2 id="security-scopes">Security Scopes</h2>
 <p>Endurain uses OAuth-style scopes to control API access. Each scope controls access to specific resource groups:</p>
 <h3 id="available-scopes">Available Scopes</h3>
@@ -2387,33 +3185,55 @@
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="best-practices">Best Practices</h2>
-<h3 id="for-client-applications">For Client Applications</h3>
+<h3 id="for-web-client-applications">For Web Client Applications</h3>
 <ol>
-<li><strong>Always use HTTPS</strong> in production to protect credentials and tokens</li>
-<li><strong>Store tokens securely</strong>:</li>
-<li>Web: Use HTTP-only cookies (handled automatically)</li>
-<li>Mobile: Use secure storage (Keychain on iOS, KeyStore on Android)</li>
-<li><strong>Implement token refresh</strong> before access token expires</li>
-<li><strong>Handle rate limits</strong> with exponential backoff</li>
-<li><strong>Validate SSL certificates</strong> to prevent man-in-the-middle attacks</li>
-<li><strong>Clear tokens on logout</strong> to prevent unauthorized access</li>
+<li><strong>Store access and CSRF tokens in memory</strong> - Never persist in localStorage or sessionStorage</li>
+<li><strong>Implement automatic token refresh</strong> - Refresh before access token expires (e.g., at 80% of lifetime)</li>
+<li><strong>Handle concurrent refresh requests</strong> - Use a refresh lock pattern to prevent race conditions</li>
+<li><strong>Always include required headers:</strong><ul>
+<li><code>Authorization: Bearer {access_token}</code> for all authenticated requests</li>
+<li><code>X-Client-Type: web</code> for all requests</li>
+<li><code>X-CSRF-Token: {csrf_token}</code> for POST/PUT/DELETE/PATCH requests</li>
+</ul>
+</li>
+<li><strong>Handle page reload gracefully</strong> - Call <code>/auth/refresh</code> on app initialization to restore in-memory tokens</li>
+<li><strong>Clear tokens on logout</strong> - The httpOnly cookie is cleared by the backend</li>
+</ol>
+<h3 id="for-mobile-client-applications">For Mobile Client Applications</h3>
+<ol>
+<li><strong>Store tokens securely</strong>:<ul>
+<li><strong>iOS</strong>: Keychain Services</li>
+<li><strong>Android</strong>: EncryptedSharedPreferences or Android Keystore</li>
+</ul>
+</li>
+<li><strong>Use PKCE for OAuth/SSO</strong> - Required for mobile OAuth flows</li>
+<li><strong>Include required headers:</strong><ul>
+<li><code>Authorization: Bearer {access_token}</code> for all authenticated requests</li>
+<li><code>X-Client-Type: mobile</code> for all requests</li>
+<li><code>X-CSRF-Token: {csrf_token}</code> for state-changing requests</li>
+</ul>
+</li>
+<li><strong>Handle token refresh proactively</strong> - Refresh before expiration</li>
+<li><strong>Implement secure token deletion</strong> on logout</li>
 </ol>
 <h3 id="for-security">For Security</h3>
 <ol>
 <li><strong>Never expose <code>SECRET_KEY</code></strong> in client code or version control</li>
-<li><strong>Use strong, randomly generated secrets</strong> for production</li>
+<li><strong>Use strong, randomly generated secrets</strong> (minimum 32 characters)</li>
+<li><strong>Always use HTTPS</strong> in production environments</li>
 <li><strong>Enable MFA</strong> for enhanced account security</li>
-<li><strong>Monitor failed login attempts</strong> for suspicious activity</li>
-<li><strong>Rotate refresh tokens</strong> periodically for long-lived sessions</li>
-<li><strong>Use appropriate scopes</strong> - request only the permissions needed</li>
+<li><strong>Monitor for token reuse</strong> - Indicates potential token theft</li>
+<li><strong>Enable session idle timeout</strong> for sensitive applications</li>
+<li><strong>Use appropriate scopes</strong> - Request only necessary permissions</li>
 </ol>
-<h3 id="for-oauthsso">For OAuth/SSO</h3>
+<h3 id="for-oauthsso-integration">For OAuth/SSO Integration</h3>
 <ol>
-<li><strong>Validate state parameter</strong> to prevent CSRF attacks</li>
-<li><strong>Use PKCE</strong> (Proof Key for Code Exchange) for mobile apps</li>
-<li><strong>Implement proper redirect URL validation</strong> to prevent open redirects</li>
+<li><strong>Always use PKCE</strong> - Required for mobile, recommended for web</li>
+<li><strong>Validate state parameter</strong> - Prevents CSRF attacks on OAuth flow</li>
+<li><strong>Implement proper redirect URL validation</strong> - Prevents open redirects</li>
 <li><strong>Handle provider errors gracefully</strong> with user-friendly messages</li>
-<li><strong>Support account linking</strong> to allow users to connect multiple providers</li>
+<li><strong>Support account linking</strong> - Allow users to connect multiple providers</li>
+<li><strong>Respect token expiry</strong> - OAuth state expires after 10 minutes</li>
 </ol>
 
 

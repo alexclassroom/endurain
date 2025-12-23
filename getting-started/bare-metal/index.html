@@ -20,7 +20,7 @@
     
     
       
-        <title>Bare-Metal Installation Guide - Endurain documentation</title>
+        <title>Bare-Metal installation guide - Endurain documentation</title>
       
     
     
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Bare-Metal Installation Guide
+              Bare-Metal installation guide
             
           </span>
         </div>
@@ -396,7 +396,7 @@
   
   
   <span class="md-ellipsis">
-    Bare-Metal Installation Guide
+    Bare-Metal installation guide
     
   </span>
   
@@ -409,7 +409,7 @@
   
   
   <span class="md-ellipsis">
-    Bare-Metal Installation Guide
+    Bare-Metal installation guide
     
   </span>
   
@@ -498,6 +498,15 @@
   <a href="#8-systemd-service" class="md-nav__link">
     <span class="md-ellipsis">
       8. Systemd Service
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-update-to-a-new-version-of-endurain" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Update to a new version of Endurain.
     </span>
   </a>
   
@@ -981,6 +990,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#9-update-to-a-new-version-of-endurain" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Update to a new version of Endurain.
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1117,6 +1135,37 @@ sudo<span class="w"> </span>-u<span class="w"> </span>postgres<span class="w"> <
 <div class="highlight"><pre><span></span><code>systemctl<span class="w"> </span>daemon-reload
 systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>endurain
 systemctl<span class="w"> </span>start<span class="w"> </span>endurain
+</code></pre></div>
+<h2 id="9-update-to-a-new-version-of-endurain">9. Update to a new version of Endurain.</h2>
+<p>Remove old version and get the latest.</p>
+<div class="highlight"><pre><span></span><code>systemctl<span class="w"> </span>stop<span class="w"> </span>endurain
+rm<span class="w"> </span>-rf<span class="w"> </span>/path/to/endurain/*
+<span class="nb">cd</span><span class="w"> </span>/path/to/endurain
+
+<span class="nv">TAG</span><span class="o">=</span><span class="k">$(</span>curl<span class="w"> </span>-s<span class="w"> </span>https://api.github.com/repos/endurain-project/endurain/releases/latest<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-oP<span class="w"> </span><span class="s1">&#39;&quot;tag_name&quot;: &quot;\K(.*)(?=&quot;)&#39;</span><span class="k">)</span>
+curl<span class="w"> </span>-L<span class="w"> </span><span class="s2">&quot;https://github.com/endurain-project/endurain/archive/refs/tags/</span><span class="nv">$TAG</span><span class="s2">.tar.gz&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="p">|</span><span class="w"> </span>tar<span class="w"> </span>xz
+<span class="nv">EXTRACTED</span><span class="o">=</span><span class="k">$(</span>ls<span class="w"> </span>-d<span class="w"> </span>endurain-*<span class="k">)</span>
+<span class="nb">shopt</span><span class="w"> </span>-s<span class="w"> </span>dotglob
+mv<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$EXTRACTED</span><span class="s2">&quot;</span>/*<span class="w"> </span>.
+<span class="nb">shopt</span><span class="w"> </span>-u<span class="w"> </span>dotglob
+rm<span class="w"> </span>-rf<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$EXTRACTED</span><span class="s2">&quot;</span>
+</code></pre></div>
+<p>Build the Frontend.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/path/to/endurain/frontend/app
+npm<span class="w"> </span>ci
+npm<span class="w"> </span>run<span class="w"> </span>build
+</code></pre></div>
+<p>Set Up the Backend.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/path/to/endurain/backend
+poetry<span class="w"> </span><span class="nb">export</span><span class="w"> </span>-f<span class="w"> </span>requirements.txt<span class="w"> </span>--output<span class="w"> </span>requirements.txt<span class="w"> </span>--without-hashes
+
+uv<span class="w"> </span>venv
+uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</code></pre></div>
+<p>start the service.</p>
+<div class="highlight"><pre><span></span><code>systemctl<span class="w"> </span>start<span class="w"> </span>endurain
 </code></pre></div>
 
 
