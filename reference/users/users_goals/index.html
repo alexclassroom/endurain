@@ -1,0 +1,5216 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../users_default_gear/">
+      
+      
+        <link rel="next" href="../users_identity_providers/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Users goals - Endurain documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--alert:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M13%2014h-2V9h2m0%209h-2v-2h2M1%2021h22L12%202z%22/%3E%3C/svg%3E');--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M13%209h-2V7h2m0%2010h-2v-6h2m-1-9A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%206a6%206%200%200%201%206%206c0%202.22-1.21%204.16-3%205.2V19a1%201%200%200%201-1%201h-4a1%201%200%200%201-1-1v-1.8c-1.79-1.04-3-2.98-3-5.2a6%206%200%200%201%206-6m2%2015v1a1%201%200%200%201-1%201h-2a1%201%200%200%201-1-1v-1zm6-10h3v2h-3zM1%2011h3v2H1zM13%201v3h-2V1zM4.92%203.5l2.13%202.14-1.42%201.41L3.5%204.93zm12.03%202.13%202.12-2.13%201.43%201.43-2.13%202.12z%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Endurain documentation" class="md-header__button md-logo" aria-label="Endurain documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Endurain documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Users goals
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/endurain-project/endurain" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Endurain documentation" class="md-nav__button md-logo" aria-label="Endurain documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Endurain documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/endurain-project/endurain" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hosting Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hosting Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started easy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/advanced-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started advanced
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/bare-metal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bare-Metal installation guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://community-scripts.github.io/ProxmoxVE/scripts?id=endurain&category=Gaming+%26+Leisure" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proxmox community script
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/maria-to-postgres-migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MariaDB to Postgres migration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/single-sign-on/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Single Sign-On (SSO)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/sleep-scoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sleep Scoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integrations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Integrations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/3rd-party-apps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3rd party apps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/3rd-party-services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3rd party services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Developer guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-guide/setup-dev-env/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup a development environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-guide/authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-guide/supported-types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Supported types
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gallery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gallery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Health
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Health
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../health/health_sleep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Health sleep
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../health/health_steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Health steps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../health/health_targets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Health targets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../health/health_weight/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Health weight
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../profile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Profile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Users
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Users
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../users/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Users
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../users_default_gear/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Users default gear
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Users goals
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Users goals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        users_goals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.ActivityType" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ActivityType
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.GoalType" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GoalType
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.Interval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interval
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.UserGoalModel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UserGoalModel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.UsersGoalBase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UsersGoalBase
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UsersGoalBase">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.UsersGoalBase.ensure_correct_goal_field" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ensure_correct_goal_field
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.UsersGoalCreate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UsersGoalCreate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.UsersGoalProgress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UsersGoalProgress
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.UsersGoalRead" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UsersGoalRead
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.UsersGoalUpdate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UsersGoalUpdate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.calculate_user_goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        calculate_user_goals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.create_user_goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        create_user_goal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.delete_user_goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        delete_user_goal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.get_user_goal_by_user_and_goal_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_user_goal_by_user_and_goal_id
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.get_user_goals_by_user_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_user_goals_by_user_id
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.update_user_goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        update_user_goal
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../users_identity_providers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Users identity providers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../users_integrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Users integrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../users_privacy_settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Users privacy settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3_7" id="__nav_7_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Users sessions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Users sessions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../users_sessions/users_sessions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Users sessions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../users_sessions/rotated_refresh_tokens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Users sessions rotated refresh tokens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../websocket/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WebSocket
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        users_goals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.ActivityType" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ActivityType
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.GoalType" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GoalType
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.Interval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interval
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.UserGoalModel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UserGoalModel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.UsersGoalBase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UsersGoalBase
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UsersGoalBase">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.UsersGoalBase.ensure_correct_goal_field" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ensure_correct_goal_field
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.UsersGoalCreate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UsersGoalCreate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.UsersGoalProgress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UsersGoalProgress
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.UsersGoalRead" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UsersGoalRead
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.UsersGoalUpdate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UsersGoalUpdate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.calculate_user_goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        calculate_user_goals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.create_user_goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        create_user_goal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.delete_user_goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        delete_user_goal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.get_user_goal_by_user_and_goal_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_user_goal_by_user_and_goal_id
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.get_user_goals_by_user_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_user_goals_by_user_id
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend.app.users.users_goals.update_user_goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        update_user_goal
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="api-reference">API Reference</h1>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="backend.app.users.users_goals"></a>
+    <div class="doc doc-contents first">
+
+        <p>User goals module for managing user fitness goals.</p>
+<p>This module provides CRUD operations and data models for user
+goal tracking including activity type goals, intervals, and
+progress calculation.</p>
+
+
+<details class="exports" open>
+  <summary>Exports</summary>
+  <ul>
+<li>CRUD: get_user_goals_by_user_id, get_user_goal_by_user_and_goal_id,
+  create_user_goal, update_user_goal, delete_user_goal</li>
+<li>Schemas: UsersGoalBase, UsersGoalCreate, UsersGoalUpdate,
+  UsersGoalRead, UsersGoalProgress</li>
+<li>Models: UsersGoal (ORM model)</li>
+<li>Enums: Interval, ActivityType, GoalType</li>
+<li>Utils: calculate_user_goals</li>
+</ul>
+</details>
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="backend.app.users.users_goals.ActivityType" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">ActivityType</span>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="str">str</span></code>, <code><span title="enum.Enum">Enum</span></code></p>
+
+
+
+        <p>Supported activity types for user goals.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.ActivityType.RUN">RUN</span></code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Running activities.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.ActivityType.BIKE">BIKE</span></code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Cycling activities.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.ActivityType.SWIM">SWIM</span></code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Swimming activities.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.ActivityType.WALK">WALK</span></code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Walking or hiking activities.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.ActivityType.STRENGTH">STRENGTH</span></code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Strength or resistance training.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.ActivityType.CARDIO">CARDIO</span></code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Cardiovascular training.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+              <details class="mkdocstrings-source">
+                <summary>Source code in <code>backend/app/users/users_goals/schema.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">ActivityType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Supported activity types for user goals.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        RUN: Running activities.</span>
+<span class="sd">        BIKE: Cycling activities.</span>
+<span class="sd">        SWIM: Swimming activities.</span>
+<span class="sd">        WALK: Walking or hiking activities.</span>
+<span class="sd">        STRENGTH: Strength or resistance training.</span>
+<span class="sd">        CARDIO: Cardiovascular training.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">RUN</span> <span class="o">=</span> <span class="s2">&quot;run&quot;</span>
+    <span class="n">BIKE</span> <span class="o">=</span> <span class="s2">&quot;bike&quot;</span>
+    <span class="n">SWIM</span> <span class="o">=</span> <span class="s2">&quot;swim&quot;</span>
+    <span class="n">WALK</span> <span class="o">=</span> <span class="s2">&quot;walk&quot;</span>
+    <span class="n">STRENGTH</span> <span class="o">=</span> <span class="s2">&quot;strength&quot;</span>
+    <span class="n">CARDIO</span> <span class="o">=</span> <span class="s2">&quot;cardio&quot;</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="backend.app.users.users_goals.GoalType" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">GoalType</span>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="str">str</span></code>, <code><span title="enum.Enum">Enum</span></code></p>
+
+
+
+        <p>Types of measurable user goals.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.GoalType.CALORIES">CALORIES</span></code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Target calories burned.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.GoalType.ACTIVITIES">ACTIVITIES</span></code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Target count of completed activities.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.GoalType.DISTANCE">DISTANCE</span></code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Target distance traveled.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.GoalType.ELEVATION">ELEVATION</span></code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Target elevation gain.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.GoalType.DURATION">DURATION</span></code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Target total duration.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+              <details class="mkdocstrings-source">
+                <summary>Source code in <code>backend/app/users/users_goals/schema.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">GoalType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Types of measurable user goals.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        CALORIES: Target calories burned.</span>
+<span class="sd">        ACTIVITIES: Target count of completed activities.</span>
+<span class="sd">        DISTANCE: Target distance traveled.</span>
+<span class="sd">        ELEVATION: Target elevation gain.</span>
+<span class="sd">        DURATION: Target total duration.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">CALORIES</span> <span class="o">=</span> <span class="s2">&quot;calories&quot;</span>
+    <span class="n">ACTIVITIES</span> <span class="o">=</span> <span class="s2">&quot;activities&quot;</span>
+    <span class="n">DISTANCE</span> <span class="o">=</span> <span class="s2">&quot;distance&quot;</span>
+    <span class="n">ELEVATION</span> <span class="o">=</span> <span class="s2">&quot;elevation&quot;</span>
+    <span class="n">DURATION</span> <span class="o">=</span> <span class="s2">&quot;duration&quot;</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="backend.app.users.users_goals.Interval" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">Interval</span>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="str">str</span></code>, <code><span title="enum.Enum">Enum</span></code></p>
+
+
+
+        <p>Recurrence intervals for user goals.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.Interval.DAILY">DAILY</span></code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Daily recurrence interval.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.Interval.WEEKLY">WEEKLY</span></code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Weekly recurrence interval.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.Interval.MONTHLY">MONTHLY</span></code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Monthly recurrence interval.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.Interval.YEARLY">YEARLY</span></code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Yearly recurrence interval.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+              <details class="mkdocstrings-source">
+                <summary>Source code in <code>backend/app/users/users_goals/schema.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Interval</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Recurrence intervals for user goals.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        DAILY: Daily recurrence interval.</span>
+<span class="sd">        WEEKLY: Weekly recurrence interval.</span>
+<span class="sd">        MONTHLY: Monthly recurrence interval.</span>
+<span class="sd">        YEARLY: Yearly recurrence interval.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">DAILY</span> <span class="o">=</span> <span class="s2">&quot;daily&quot;</span>
+    <span class="n">WEEKLY</span> <span class="o">=</span> <span class="s2">&quot;weekly&quot;</span>
+    <span class="n">MONTHLY</span> <span class="o">=</span> <span class="s2">&quot;monthly&quot;</span>
+    <span class="n">YEARLY</span> <span class="o">=</span> <span class="s2">&quot;yearly&quot;</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="backend.app.users.users_goals.UserGoalModel" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">UserGoalModel</span>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="core.database.Base">Base</span></code></p>
+
+
+
+        <p>User fitness goal tracking model.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UserGoalModel.id">id</span></code></td>
+            <td>
+                  <code><span title="sqlalchemy.orm.Mapped">Mapped</span>[<span title="int">int</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Primary key.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UserGoalModel.user_id">user_id</span></code></td>
+            <td>
+                  <code><span title="sqlalchemy.orm.Mapped">Mapped</span>[<span title="int">int</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Foreign key to users table.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UserGoalModel.interval">interval</span></code></td>
+            <td>
+                  <code><span title="sqlalchemy.orm.Mapped">Mapped</span>[<span title="str">str</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Goal time interval (daily, weekly, monthly,
+yearly).</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UserGoalModel.activity_type">activity_type</span></code></td>
+            <td>
+                  <code><span title="sqlalchemy.orm.Mapped">Mapped</span>[<span title="str">str</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Type of activity for the goal.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UserGoalModel.goal_type">goal_type</span></code></td>
+            <td>
+                  <code><span title="sqlalchemy.orm.Mapped">Mapped</span>[<span title="str">str</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Type of goal metric.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UserGoalModel.goal_calories">goal_calories</span></code></td>
+            <td>
+                  <code><span title="sqlalchemy.orm.Mapped">Mapped</span>[<span title="int">int</span> | None]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Target calories in kcal.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UserGoalModel.goal_activities_number">goal_activities_number</span></code></td>
+            <td>
+                  <code><span title="sqlalchemy.orm.Mapped">Mapped</span>[<span title="int">int</span> | None]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Target number of activities.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UserGoalModel.goal_distance">goal_distance</span></code></td>
+            <td>
+                  <code><span title="sqlalchemy.orm.Mapped">Mapped</span>[<span title="int">int</span> | None]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Target distance in meters.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UserGoalModel.goal_elevation">goal_elevation</span></code></td>
+            <td>
+                  <code><span title="sqlalchemy.orm.Mapped">Mapped</span>[<span title="int">int</span> | None]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Target elevation gain in meters.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UserGoalModel.goal_duration">goal_duration</span></code></td>
+            <td>
+                  <code><span title="sqlalchemy.orm.Mapped">Mapped</span>[<span title="int">int</span> | None]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Target duration in seconds.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UserGoalModel.user">user</span></code></td>
+            <td>
+                  <code><span title="sqlalchemy.orm.Mapped">Mapped</span>[<span title="int">int</span> | None]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Relationship to Users model.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+              <details class="mkdocstrings-source">
+                <summary>Source code in <code>backend/app/users/users_goals/models.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">UsersGoal</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    User fitness goal tracking model.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        id: Primary key.</span>
+<span class="sd">        user_id: Foreign key to users table.</span>
+<span class="sd">        interval: Goal time interval (daily, weekly, monthly,</span>
+<span class="sd">            yearly).</span>
+<span class="sd">        activity_type: Type of activity for the goal.</span>
+<span class="sd">        goal_type: Type of goal metric.</span>
+<span class="sd">        goal_calories: Target calories in kcal.</span>
+<span class="sd">        goal_activities_number: Target number of activities.</span>
+<span class="sd">        goal_distance: Target distance in meters.</span>
+<span class="sd">        goal_elevation: Target elevation gain in meters.</span>
+<span class="sd">        goal_duration: Target duration in seconds.</span>
+<span class="sd">        user: Relationship to Users model.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s2">&quot;users_goals&quot;</span>
+
+    <span class="nb">id</span><span class="p">:</span> <span class="n">Mapped</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">mapped_column</span><span class="p">(</span>
+        <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">autoincrement</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">user_id</span><span class="p">:</span> <span class="n">Mapped</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">mapped_column</span><span class="p">(</span>
+        <span class="n">ForeignKey</span><span class="p">(</span><span class="s2">&quot;users.id&quot;</span><span class="p">,</span> <span class="n">ondelete</span><span class="o">=</span><span class="s2">&quot;CASCADE&quot;</span><span class="p">),</span>
+        <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">comment</span><span class="o">=</span><span class="s2">&quot;User ID that the goals belongs&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">interval</span><span class="p">:</span> <span class="n">Mapped</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">mapped_column</span><span class="p">(</span>
+        <span class="n">String</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="mi">250</span><span class="p">),</span>
+        <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">comment</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Goal interval (e.g., &#39;daily&#39;, &#39;weekly&#39;, &#39;monthly&#39;, &#39;yearly&#39;)&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="n">activity_type</span><span class="p">:</span> <span class="n">Mapped</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">mapped_column</span><span class="p">(</span>
+        <span class="n">String</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="mi">50</span><span class="p">),</span>
+        <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">comment</span><span class="o">=</span><span class="s2">&quot;Activity type (e.g., &#39;run&#39;, &#39;bike&#39;, &#39;swim&#39;)&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">goal_type</span><span class="p">:</span> <span class="n">Mapped</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">mapped_column</span><span class="p">(</span>
+        <span class="n">String</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="mi">50</span><span class="p">),</span>
+        <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">comment</span><span class="o">=</span><span class="s2">&quot;Goal type (e.g., &#39;calories&#39;, &#39;distance&#39;, &#39;duration&#39;)&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">goal_calories</span><span class="p">:</span> <span class="n">Mapped</span><span class="p">[</span><span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="n">mapped_column</span><span class="p">(</span>
+        <span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">comment</span><span class="o">=</span><span class="s2">&quot;Goal calories in kcal (e.g., 5000 for 5000 kcal)&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">goal_activities_number</span><span class="p">:</span> <span class="n">Mapped</span><span class="p">[</span><span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="n">mapped_column</span><span class="p">(</span>
+        <span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">comment</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Goal activities number (e.g., 5 for 5 activities)&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="n">goal_distance</span><span class="p">:</span> <span class="n">Mapped</span><span class="p">[</span><span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="n">mapped_column</span><span class="p">(</span>
+        <span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">comment</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Goal distance in meters (e.g., 10000 for 10 km)&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="n">goal_elevation</span><span class="p">:</span> <span class="n">Mapped</span><span class="p">[</span><span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="n">mapped_column</span><span class="p">(</span>
+        <span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">comment</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Goal elevation in meters (e.g., 1000 for 1000 m)&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="n">goal_duration</span><span class="p">:</span> <span class="n">Mapped</span><span class="p">[</span><span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="n">mapped_column</span><span class="p">(</span>
+        <span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">comment</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Goal duration in seconds (e.g., 3600 for 1 hours)&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Relationship to User</span>
+    <span class="c1"># TODO: Change to Mapped[&quot;User&quot;] when all modules use mapped</span>
+    <span class="n">users</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s2">&quot;Users&quot;</span><span class="p">,</span> <span class="n">back_populates</span><span class="o">=</span><span class="s2">&quot;goals&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="backend.app.users.users_goals.UsersGoalBase" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">UsersGoalBase</span>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+
+
+        <p>Base schema for users fitness goals.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UsersGoalBase.interval">interval</span></code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="Interval (backend.app.users.users_goals.schema.Interval)" href="#backend.app.users.users_goals.Interval">Interval</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Goal time interval (daily, weekly, monthly,
+yearly).</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UsersGoalBase.activity_type">activity_type</span></code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="ActivityType (backend.app.users.users_goals.schema.ActivityType)" href="#backend.app.users.users_goals.ActivityType">ActivityType</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Type of activity for the goal.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UsersGoalBase.goal_type">goal_type</span></code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="GoalType (backend.app.users.users_goals.schema.GoalType)" href="#backend.app.users.users_goals.GoalType">GoalType</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Type of goal metric being tracked.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UsersGoalBase.goal_calories">goal_calories</span></code></td>
+            <td>
+                  <code><span title="pydantic.StrictInt">StrictInt</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Target calories in kcal.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UsersGoalBase.goal_activities_number">goal_activities_number</span></code></td>
+            <td>
+                  <code><span title="pydantic.StrictInt">StrictInt</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Target number of activities.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UsersGoalBase.goal_distance">goal_distance</span></code></td>
+            <td>
+                  <code><span title="pydantic.StrictInt">StrictInt</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Target distance in meters.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UsersGoalBase.goal_elevation">goal_elevation</span></code></td>
+            <td>
+                  <code><span title="pydantic.StrictInt">StrictInt</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Target elevation gain in meters.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UsersGoalBase.goal_duration">goal_duration</span></code></td>
+            <td>
+                  <code><span title="pydantic.StrictInt">StrictInt</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Target duration in seconds.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+              <details class="mkdocstrings-source">
+                <summary>Source code in <code>backend/app/users/users_goals/schema.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">UsersGoalBase</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Base schema for users fitness goals.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        interval: Goal time interval (daily, weekly, monthly,</span>
+<span class="sd">            yearly).</span>
+<span class="sd">        activity_type: Type of activity for the goal.</span>
+<span class="sd">        goal_type: Type of goal metric being tracked.</span>
+<span class="sd">        goal_calories: Target calories in kcal.</span>
+<span class="sd">        goal_activities_number: Target number of activities.</span>
+<span class="sd">        goal_distance: Target distance in meters.</span>
+<span class="sd">        goal_elevation: Target elevation gain in meters.</span>
+<span class="sd">        goal_duration: Target duration in seconds.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">interval</span><span class="p">:</span> <span class="n">Interval</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Goal time interval&quot;</span><span class="p">)</span>
+    <span class="n">activity_type</span><span class="p">:</span> <span class="n">ActivityType</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="o">...</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Type of activity for the goal&quot;</span>
+    <span class="p">)</span>
+    <span class="n">goal_type</span><span class="p">:</span> <span class="n">GoalType</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Type of goal metric being tracked&quot;</span><span class="p">)</span>
+    <span class="n">goal_calories</span><span class="p">:</span> <span class="n">StrictInt</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Target calories in kcal&quot;</span>
+    <span class="p">)</span>
+    <span class="n">goal_activities_number</span><span class="p">:</span> <span class="n">StrictInt</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Target number of activities&quot;</span>
+    <span class="p">)</span>
+    <span class="n">goal_distance</span><span class="p">:</span> <span class="n">StrictInt</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Target distance in meters&quot;</span>
+    <span class="p">)</span>
+    <span class="n">goal_elevation</span><span class="p">:</span> <span class="n">StrictInt</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Target elevation gain in meters&quot;</span>
+    <span class="p">)</span>
+    <span class="n">goal_duration</span><span class="p">:</span> <span class="n">StrictInt</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Target duration in seconds&quot;</span>
+    <span class="p">)</span>
+
+    <span class="n">model_config</span> <span class="o">=</span> <span class="n">ConfigDict</span><span class="p">(</span>
+        <span class="n">from_attributes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">extra</span><span class="o">=</span><span class="s2">&quot;forbid&quot;</span><span class="p">,</span>
+        <span class="n">validate_assignment</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">use_enum_values</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="nd">@model_validator</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;after&quot;</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ensure_correct_goal_field</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;UsersGoalBase&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Validate exactly one goal field matches goal_type.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Self with validated goal field.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            PydanticCustomError: If required field missing or</span>
+<span class="sd">                extra fields set.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">goal_type_value</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">goal_type</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">goal_type</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">goal_type</span><span class="o">.</span><span class="n">value</span>
+        <span class="p">)</span>
+
+        <span class="n">required_field</span> <span class="o">=</span> <span class="n">TYPE_TO_FIELD</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">goal_type_value</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">required_field</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span>
+
+        <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">required_field</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PydanticCustomError</span><span class="p">(</span>
+                <span class="s2">&quot;missing_goal_value&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;</span><span class="si">{field}</span><span class="s2"> is required when goal_type=</span><span class="si">{goal_type}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;field&quot;</span><span class="p">:</span> <span class="n">required_field</span><span class="p">,</span>
+                    <span class="s2">&quot;goal_type&quot;</span><span class="p">:</span> <span class="n">goal_type_value</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">TYPE_TO_FIELD</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">name</span> <span class="o">!=</span> <span class="n">required_field</span> <span class="ow">and</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">PydanticCustomError</span><span class="p">(</span>
+                    <span class="s2">&quot;exclusive_goal_value&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;Only </span><span class="si">{field}</span><span class="s2"> may be set when goal_type=</span><span class="si">{goal_type}</span><span class="s2">&quot;</span><span class="p">,</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;field&quot;</span><span class="p">:</span> <span class="n">required_field</span><span class="p">,</span>
+                        <span class="s2">&quot;goal_type&quot;</span><span class="p">:</span> <span class="n">goal_type_value</span><span class="p">,</span>
+                    <span class="p">},</span>
+                <span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="backend.app.users.users_goals.UsersGoalBase.ensure_correct_goal_field" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">ensure_correct_goal_field</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">ensure_correct_goal_field</span><span class="p">()</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Validate exactly one goal field matches goal_type.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="UsersGoalBase (backend.app.users.users_goals.schema.UsersGoalBase)" href="#backend.app.users.users_goals.UsersGoalBase">UsersGoalBase</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Self with validated goal field.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="pydantic_core.PydanticCustomError">PydanticCustomError</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If required field missing or
+extra fields set.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>backend/app/users/users_goals/schema.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@model_validator</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;after&quot;</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">ensure_correct_goal_field</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;UsersGoalBase&quot;</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Validate exactly one goal field matches goal_type.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Self with validated goal field.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        PydanticCustomError: If required field missing or</span>
+<span class="sd">            extra fields set.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">goal_type_value</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">goal_type</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">goal_type</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">goal_type</span><span class="o">.</span><span class="n">value</span>
+    <span class="p">)</span>
+
+    <span class="n">required_field</span> <span class="o">=</span> <span class="n">TYPE_TO_FIELD</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">goal_type_value</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">required_field</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">required_field</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">PydanticCustomError</span><span class="p">(</span>
+            <span class="s2">&quot;missing_goal_value&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;</span><span class="si">{field}</span><span class="s2"> is required when goal_type=</span><span class="si">{goal_type}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;field&quot;</span><span class="p">:</span> <span class="n">required_field</span><span class="p">,</span>
+                <span class="s2">&quot;goal_type&quot;</span><span class="p">:</span> <span class="n">goal_type_value</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">TYPE_TO_FIELD</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="o">!=</span> <span class="n">required_field</span> <span class="ow">and</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PydanticCustomError</span><span class="p">(</span>
+                <span class="s2">&quot;exclusive_goal_value&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Only </span><span class="si">{field}</span><span class="s2"> may be set when goal_type=</span><span class="si">{goal_type}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;field&quot;</span><span class="p">:</span> <span class="n">required_field</span><span class="p">,</span>
+                    <span class="s2">&quot;goal_type&quot;</span><span class="p">:</span> <span class="n">goal_type_value</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">)</span>
+    <span class="k">return</span> <span class="bp">self</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="backend.app.users.users_goals.UsersGoalCreate" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">UsersGoalCreate</span>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="UsersGoalBase (backend.app.users.users_goals.schema.UsersGoalBase)" href="#backend.app.users.users_goals.UsersGoalBase">UsersGoalBase</a></code></p>
+
+
+
+        <p>Schema for creating a new users goal.</p>
+<p>Inherits all validation from UsersGoalBase.</p>
+
+
+
+
+
+
+
+
+              <details class="mkdocstrings-source">
+                <summary>Source code in <code>backend/app/users/users_goals/schema.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">UsersGoalCreate</span><span class="p">(</span><span class="n">UsersGoalBase</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Schema for creating a new users goal.</span>
+
+<span class="sd">    Inherits all validation from UsersGoalBase.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="backend.app.users.users_goals.UsersGoalProgress" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">UsersGoalProgress</span>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+
+
+        <p>Schema for user goal progress tracking.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UsersGoalProgress.goal_id">goal_id</span></code></td>
+            <td>
+                  <code><span title="pydantic.StrictInt">StrictInt</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Goal identifier.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UsersGoalProgress.interval">interval</span></code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="Interval (backend.app.users.users_goals.schema.Interval)" href="#backend.app.users.users_goals.Interval">Interval</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Goal time interval.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UsersGoalProgress.activity_type">activity_type</span></code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="ActivityType (backend.app.users.users_goals.schema.ActivityType)" href="#backend.app.users.users_goals.ActivityType">ActivityType</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Activity type for this goal.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UsersGoalProgress.goal_type">goal_type</span></code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="GoalType (backend.app.users.users_goals.schema.GoalType)" href="#backend.app.users.users_goals.GoalType">GoalType</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Type of goal metric.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UsersGoalProgress.start_date">start_date</span></code></td>
+            <td>
+                  <code><span title="pydantic.StrictStr">StrictStr</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Period start date.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UsersGoalProgress.end_date">end_date</span></code></td>
+            <td>
+                  <code><span title="pydantic.StrictStr">StrictStr</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Period end date.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UsersGoalProgress.percentage_completed">percentage_completed</span></code></td>
+            <td>
+                  <code><span title="pydantic.StrictInt">StrictInt</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Completion percentage.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UsersGoalProgress.total_calories">total_calories</span></code></td>
+            <td>
+                  <code><span title="pydantic.StrictInt">StrictInt</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Total calories achieved.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UsersGoalProgress.total_activities_number">total_activities_number</span></code></td>
+            <td>
+                  <code><span title="pydantic.StrictInt">StrictInt</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Total activities completed.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UsersGoalProgress.total_distance">total_distance</span></code></td>
+            <td>
+                  <code><span title="pydantic.StrictInt">StrictInt</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Total distance achieved.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UsersGoalProgress.total_elevation">total_elevation</span></code></td>
+            <td>
+                  <code><span title="pydantic.StrictInt">StrictInt</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Total elevation gained.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UsersGoalProgress.total_duration">total_duration</span></code></td>
+            <td>
+                  <code><span title="pydantic.StrictInt">StrictInt</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Total duration achieved.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UsersGoalProgress.goal_calories">goal_calories</span></code></td>
+            <td>
+                  <code><span title="pydantic.StrictInt">StrictInt</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Target calories.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UsersGoalProgress.goal_activities_number">goal_activities_number</span></code></td>
+            <td>
+                  <code><span title="pydantic.StrictInt">StrictInt</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Target activities count.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UsersGoalProgress.goal_distance">goal_distance</span></code></td>
+            <td>
+                  <code><span title="pydantic.StrictInt">StrictInt</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Target distance.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UsersGoalProgress.goal_elevation">goal_elevation</span></code></td>
+            <td>
+                  <code><span title="pydantic.StrictInt">StrictInt</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Target elevation.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UsersGoalProgress.goal_duration">goal_duration</span></code></td>
+            <td>
+                  <code><span title="pydantic.StrictInt">StrictInt</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Target duration.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+              <details class="mkdocstrings-source">
+                <summary>Source code in <code>backend/app/users/users_goals/schema.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">UsersGoalProgress</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Schema for user goal progress tracking.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        goal_id: Goal identifier.</span>
+<span class="sd">        interval: Goal time interval.</span>
+<span class="sd">        activity_type: Activity type for this goal.</span>
+<span class="sd">        goal_type: Type of goal metric.</span>
+<span class="sd">        start_date: Period start date.</span>
+<span class="sd">        end_date: Period end date.</span>
+<span class="sd">        percentage_completed: Completion percentage.</span>
+<span class="sd">        total_calories: Total calories achieved.</span>
+<span class="sd">        total_activities_number: Total activities completed.</span>
+<span class="sd">        total_distance: Total distance achieved.</span>
+<span class="sd">        total_elevation: Total elevation gained.</span>
+<span class="sd">        total_duration: Total duration achieved.</span>
+<span class="sd">        goal_calories: Target calories.</span>
+<span class="sd">        goal_activities_number: Target activities count.</span>
+<span class="sd">        goal_distance: Target distance.</span>
+<span class="sd">        goal_elevation: Target elevation.</span>
+<span class="sd">        goal_duration: Target duration.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">goal_id</span><span class="p">:</span> <span class="n">StrictInt</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Goal identifier&quot;</span><span class="p">)</span>
+    <span class="n">interval</span><span class="p">:</span> <span class="n">Interval</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Goal time interval&quot;</span><span class="p">)</span>
+    <span class="n">activity_type</span><span class="p">:</span> <span class="n">ActivityType</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Activity type for this goal&quot;</span><span class="p">)</span>
+    <span class="n">goal_type</span><span class="p">:</span> <span class="n">GoalType</span>
+    <span class="n">start_date</span><span class="p">:</span> <span class="n">StrictStr</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Period start date&quot;</span><span class="p">)</span>
+    <span class="n">end_date</span><span class="p">:</span> <span class="n">StrictStr</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Period end date&quot;</span><span class="p">)</span>
+    <span class="n">percentage_completed</span><span class="p">:</span> <span class="n">StrictInt</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Completion percentage&quot;</span>
+    <span class="p">)</span>
+    <span class="c1"># total</span>
+    <span class="n">total_calories</span><span class="p">:</span> <span class="n">StrictInt</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Total calories achieved&quot;</span>
+    <span class="p">)</span>
+    <span class="n">total_activities_number</span><span class="p">:</span> <span class="n">StrictInt</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Total activities completed&quot;</span>
+    <span class="p">)</span>
+    <span class="n">total_distance</span><span class="p">:</span> <span class="n">StrictInt</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Total distance achieved&quot;</span>
+    <span class="p">)</span>
+    <span class="n">total_elevation</span><span class="p">:</span> <span class="n">StrictInt</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Total elevation gained&quot;</span>
+    <span class="p">)</span>
+    <span class="n">total_duration</span><span class="p">:</span> <span class="n">StrictInt</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Total duration achieved&quot;</span>
+    <span class="p">)</span>
+    <span class="c1"># goal</span>
+    <span class="n">goal_calories</span><span class="p">:</span> <span class="n">StrictInt</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Target calories&quot;</span>
+    <span class="p">)</span>
+    <span class="n">goal_activities_number</span><span class="p">:</span> <span class="n">StrictInt</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Target activities count&quot;</span>
+    <span class="p">)</span>
+    <span class="n">goal_distance</span><span class="p">:</span> <span class="n">StrictInt</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Target distance&quot;</span>
+    <span class="p">)</span>
+    <span class="n">goal_elevation</span><span class="p">:</span> <span class="n">StrictInt</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Target elevation&quot;</span>
+    <span class="p">)</span>
+    <span class="n">goal_duration</span><span class="p">:</span> <span class="n">StrictInt</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Target duration&quot;</span>
+    <span class="p">)</span>
+
+    <span class="n">model_config</span> <span class="o">=</span> <span class="n">ConfigDict</span><span class="p">(</span>
+        <span class="n">from_attributes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">extra</span><span class="o">=</span><span class="s2">&quot;forbid&quot;</span><span class="p">,</span>
+        <span class="n">validate_assignment</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">use_enum_values</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="backend.app.users.users_goals.UsersGoalRead" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">UsersGoalRead</span>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="UsersGoalBase (backend.app.users.users_goals.schema.UsersGoalBase)" href="#backend.app.users.users_goals.UsersGoalBase">UsersGoalBase</a></code></p>
+
+
+
+        <p>Schema for reading a user goal.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UsersGoalRead.id">id</span></code></td>
+            <td>
+                  <code><span title="pydantic.StrictInt">StrictInt</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Unique identifier for the goal.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="backend.app.users.users_goals.UsersGoalRead.user_id">user_id</span></code></td>
+            <td>
+                  <code><span title="pydantic.StrictInt">StrictInt</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>User who owns this goal.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+              <details class="mkdocstrings-source">
+                <summary>Source code in <code>backend/app/users/users_goals/schema.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">UsersGoalRead</span><span class="p">(</span><span class="n">UsersGoalBase</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Schema for reading a user goal.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        id: Unique identifier for the goal.</span>
+<span class="sd">        user_id: User who owns this goal.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nb">id</span><span class="p">:</span> <span class="n">StrictInt</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Unique identifier for the goal&quot;</span><span class="p">)</span>
+    <span class="n">user_id</span><span class="p">:</span> <span class="n">StrictInt</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;User who owns this goal&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="backend.app.users.users_goals.UsersGoalUpdate" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">UsersGoalUpdate</span>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="UsersGoalRead (backend.app.users.users_goals.schema.UsersGoalRead)" href="#backend.app.users.users_goals.UsersGoalRead">UsersGoalRead</a></code></p>
+
+
+
+        <p>Schema for updating an existing users goal.</p>
+<p>Supports partial updates. Omitted fields remain unchanged.</p>
+
+
+
+
+
+
+
+
+              <details class="mkdocstrings-source">
+                <summary>Source code in <code>backend/app/users/users_goals/schema.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">UsersGoalUpdate</span><span class="p">(</span><span class="n">UsersGoalRead</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Schema for updating an existing users goal.</span>
+
+<span class="sd">    Supports partial updates. Omitted fields remain unchanged.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="backend.app.users.users_goals.calculate_user_goals" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">calculate_user_goals</span>
+
+
+</h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">calculate_user_goals</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="n">date</span><span class="p">,</span> <span class="n">db</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Calculate progress for all user goals on a specified date.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>user_id</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The ID of the user.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>date</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Date in YYYY-MM-DD format. If None, uses
+current date.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>db</code>
+            </td>
+            <td>
+                  <code><span title="sqlalchemy.orm.Session">Session</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>SQLAlchemy database session.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="list">list</span>[<span title="users.users_goals.schema.UsersGoalProgress">UsersGoalProgress</span>] | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>List of UsersGoalProgress objects, or None if no
+goals found.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="fastapi.HTTPException">HTTPException</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If database error occurs.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>backend/app/users/users_goals/utils.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">calculate_user_goals</span><span class="p">(</span>
+    <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">date</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="n">db</span><span class="p">:</span> <span class="n">Session</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">user_goals_schema</span><span class="o">.</span><span class="n">UsersGoalProgress</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculate progress for all user goals on a specified date.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        user_id: The ID of the user.</span>
+<span class="sd">        date: Date in YYYY-MM-DD format. If None, uses</span>
+<span class="sd">            current date.</span>
+<span class="sd">        db: SQLAlchemy database session.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        List of UsersGoalProgress objects, or None if no</span>
+<span class="sd">            goals found.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        HTTPException: If database error occurs.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">date</span><span class="p">:</span>
+        <span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">goals</span> <span class="o">=</span> <span class="n">user_goals_crud</span><span class="o">.</span><span class="n">get_user_goals_by_user_id</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="n">db</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">goals</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+        <span class="k">return</span> <span class="p">[</span>
+            <span class="n">calculate_goal_progress_by_activity_type</span><span class="p">(</span><span class="n">goal</span><span class="p">,</span> <span class="n">date</span><span class="p">,</span> <span class="n">db</span><span class="p">)</span> <span class="k">for</span> <span class="n">goal</span> <span class="ow">in</span> <span class="n">goals</span>
+        <span class="p">]</span>
+    <span class="k">except</span> <span class="n">HTTPException</span> <span class="k">as</span> <span class="n">http_err</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">http_err</span>
+    <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">)</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+        <span class="c1"># Log the exception</span>
+        <span class="n">core_logger</span><span class="o">.</span><span class="n">print_to_log</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Error in calculate_user_goals: </span><span class="si">{</span><span class="n">err</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;error&quot;</span><span class="p">,</span>
+            <span class="n">exc</span><span class="o">=</span><span class="n">err</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="c1"># Raise an HTTPException with a 400 status code</span>
+        <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span>
+            <span class="n">status_code</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_400_BAD_REQUEST</span><span class="p">,</span>
+            <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;Invalid data provided&quot;</span><span class="p">,</span>
+        <span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">err</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+        <span class="c1"># Log unexpected exceptions</span>
+        <span class="n">core_logger</span><span class="o">.</span><span class="n">print_to_log</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Unexpected error in calculate_user_goals: </span><span class="si">{</span><span class="n">err</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;error&quot;</span><span class="p">,</span>
+            <span class="n">exc</span><span class="o">=</span><span class="n">err</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="c1"># Raise an HTTPException with a 500 status code</span>
+        <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span>
+            <span class="n">status_code</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_500_INTERNAL_SERVER_ERROR</span><span class="p">,</span>
+            <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;Internal Server Error&quot;</span><span class="p">,</span>
+        <span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">err</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="backend.app.users.users_goals.create_user_goal" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">create_user_goal</span>
+
+
+</h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">create_user_goal</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="n">user_goal</span><span class="p">,</span> <span class="n">db</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Create a new user goal.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>user_id</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The ID of the user.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>user_goal</code>
+            </td>
+            <td>
+                  <code><span title="users.users_goals.schema.UsersGoalCreate">UsersGoalCreate</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Goal data to create.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>db</code>
+            </td>
+            <td>
+                  <code><span title="sqlalchemy.orm.Session">Session</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>SQLAlchemy database session.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="users.users_goals.models.UsersGoal">UsersGoal</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The created UsersGoal model.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="fastapi.HTTPException">HTTPException</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If goal already exists (409) or database
+error occurs (500).</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>backend/app/users/users_goals/crud.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@core_decorators</span><span class="o">.</span><span class="n">handle_db_errors</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">create_user_goal</span><span class="p">(</span>
+    <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">user_goal</span><span class="p">:</span> <span class="n">user_goals_schema</span><span class="o">.</span><span class="n">UsersGoalCreate</span><span class="p">,</span>
+    <span class="n">db</span><span class="p">:</span> <span class="n">Session</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">user_goals_models</span><span class="o">.</span><span class="n">UsersGoal</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create a new user goal.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        user_id: The ID of the user.</span>
+<span class="sd">        user_goal: Goal data to create.</span>
+<span class="sd">        db: SQLAlchemy database session.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The created UsersGoal model.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        HTTPException: If goal already exists (409) or database</span>
+<span class="sd">            error occurs (500).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Check if goal already exists</span>
+        <span class="n">stmt</span> <span class="o">=</span> <span class="n">select</span><span class="p">(</span><span class="n">user_goals_models</span><span class="o">.</span><span class="n">UsersGoal</span><span class="p">)</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
+            <span class="n">user_goals_models</span><span class="o">.</span><span class="n">UsersGoal</span><span class="o">.</span><span class="n">user_id</span> <span class="o">==</span> <span class="n">user_id</span><span class="p">,</span>
+            <span class="n">user_goals_models</span><span class="o">.</span><span class="n">UsersGoal</span><span class="o">.</span><span class="n">interval</span> <span class="o">==</span> <span class="n">user_goal</span><span class="o">.</span><span class="n">interval</span><span class="p">,</span>
+            <span class="n">user_goals_models</span><span class="o">.</span><span class="n">UsersGoal</span><span class="o">.</span><span class="n">activity_type</span> <span class="o">==</span> <span class="n">user_goal</span><span class="o">.</span><span class="n">activity_type</span><span class="p">,</span>
+            <span class="n">user_goals_models</span><span class="o">.</span><span class="n">UsersGoal</span><span class="o">.</span><span class="n">goal_type</span> <span class="o">==</span> <span class="n">user_goal</span><span class="o">.</span><span class="n">goal_type</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">existing_goal</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">stmt</span><span class="p">)</span><span class="o">.</span><span class="n">scalar_one_or_none</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">existing_goal</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span>
+                <span class="n">status_code</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_409_CONFLICT</span><span class="p">,</span>
+                <span class="n">detail</span><span class="o">=</span><span class="p">(</span>
+                    <span class="s2">&quot;User already has a goal for this activity type, &quot;</span>
+                    <span class="s2">&quot;interval, and goal type.&quot;</span>
+                <span class="p">),</span>
+            <span class="p">)</span>
+
+        <span class="n">db_user_goal</span> <span class="o">=</span> <span class="n">user_goals_models</span><span class="o">.</span><span class="n">UsersGoal</span><span class="p">(</span>
+            <span class="n">user_id</span><span class="o">=</span><span class="n">user_id</span><span class="p">,</span>
+            <span class="n">interval</span><span class="o">=</span><span class="n">user_goal</span><span class="o">.</span><span class="n">interval</span><span class="p">,</span>
+            <span class="n">activity_type</span><span class="o">=</span><span class="n">user_goal</span><span class="o">.</span><span class="n">activity_type</span><span class="p">,</span>
+            <span class="n">goal_type</span><span class="o">=</span><span class="n">user_goal</span><span class="o">.</span><span class="n">goal_type</span><span class="p">,</span>
+            <span class="n">goal_calories</span><span class="o">=</span><span class="n">user_goal</span><span class="o">.</span><span class="n">goal_calories</span><span class="p">,</span>
+            <span class="n">goal_activities_number</span><span class="o">=</span><span class="n">user_goal</span><span class="o">.</span><span class="n">goal_activities_number</span><span class="p">,</span>
+            <span class="n">goal_distance</span><span class="o">=</span><span class="n">user_goal</span><span class="o">.</span><span class="n">goal_distance</span><span class="p">,</span>
+            <span class="n">goal_elevation</span><span class="o">=</span><span class="n">user_goal</span><span class="o">.</span><span class="n">goal_elevation</span><span class="p">,</span>
+            <span class="n">goal_duration</span><span class="o">=</span><span class="n">user_goal</span><span class="o">.</span><span class="n">goal_duration</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">db_user_goal</span><span class="p">)</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">refresh</span><span class="p">(</span><span class="n">db_user_goal</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">db_user_goal</span>
+    <span class="k">except</span> <span class="n">HTTPException</span><span class="p">:</span>
+        <span class="k">raise</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="backend.app.users.users_goals.delete_user_goal" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">delete_user_goal</span>
+
+
+</h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">delete_user_goal</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="n">goal_id</span><span class="p">,</span> <span class="n">db</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Delete a user's goal from the database.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>user_id</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>ID of the user who owns the goal.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>goal_id</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>ID of the goal to delete.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>db</code>
+            </td>
+            <td>
+                  <code><span title="sqlalchemy.orm.Session">Session</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>SQLAlchemy database session.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="fastapi.HTTPException">HTTPException</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If goal not found (404) or database
+error occurs (500).</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>backend/app/users/users_goals/crud.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@core_decorators</span><span class="o">.</span><span class="n">handle_db_errors</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">delete_user_goal</span><span class="p">(</span><span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">goal_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">db</span><span class="p">:</span> <span class="n">Session</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Delete a user&#39;s goal from the database.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        user_id: ID of the user who owns the goal.</span>
+<span class="sd">        goal_id: ID of the goal to delete.</span>
+<span class="sd">        db: SQLAlchemy database session.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        HTTPException: If goal not found (404) or database</span>
+<span class="sd">            error occurs (500).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">db_user_goal</span> <span class="o">=</span> <span class="n">get_user_goal_by_user_and_goal_id</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="n">goal_id</span><span class="p">,</span> <span class="n">db</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">db_user_goal</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span>
+            <span class="n">status_code</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_404_NOT_FOUND</span><span class="p">,</span>
+            <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;User goal not found&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="n">db</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">db_user_goal</span><span class="p">)</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="backend.app.users.users_goals.get_user_goal_by_user_and_goal_id" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">get_user_goal_by_user_and_goal_id</span>
+
+
+</h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_user_goal_by_user_and_goal_id</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="n">goal_id</span><span class="p">,</span> <span class="n">db</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Retrieve a specific goal by user ID and goal ID.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>user_id</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The ID of the user.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>goal_id</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The ID of the goal.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>db</code>
+            </td>
+            <td>
+                  <code><span title="sqlalchemy.orm.Session">Session</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>SQLAlchemy database session.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="users.users_goals.models.UsersGoal">UsersGoal</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>UsersGoal model if found, None otherwise.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="fastapi.HTTPException">HTTPException</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If database error occurs.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>backend/app/users/users_goals/crud.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@core_decorators</span><span class="o">.</span><span class="n">handle_db_errors</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_user_goal_by_user_and_goal_id</span><span class="p">(</span>
+    <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">goal_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">db</span><span class="p">:</span> <span class="n">Session</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">user_goals_models</span><span class="o">.</span><span class="n">UsersGoal</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Retrieve a specific goal by user ID and goal ID.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        user_id: The ID of the user.</span>
+<span class="sd">        goal_id: The ID of the goal.</span>
+<span class="sd">        db: SQLAlchemy database session.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        UsersGoal model if found, None otherwise.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        HTTPException: If database error occurs.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">stmt</span> <span class="o">=</span> <span class="n">select</span><span class="p">(</span><span class="n">user_goals_models</span><span class="o">.</span><span class="n">UsersGoal</span><span class="p">)</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
+        <span class="n">user_goals_models</span><span class="o">.</span><span class="n">UsersGoal</span><span class="o">.</span><span class="n">user_id</span> <span class="o">==</span> <span class="n">user_id</span><span class="p">,</span>
+        <span class="n">user_goals_models</span><span class="o">.</span><span class="n">UsersGoal</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">goal_id</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">stmt</span><span class="p">)</span><span class="o">.</span><span class="n">scalar_one_or_none</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="backend.app.users.users_goals.get_user_goals_by_user_id" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">get_user_goals_by_user_id</span>
+
+
+</h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_user_goals_by_user_id</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="n">db</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">activity_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">goal_type</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Retrieve goals for a specific user with optional filters.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>user_id</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The ID of the user.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>db</code>
+            </td>
+            <td>
+                  <code><span title="sqlalchemy.orm.Session">Session</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>SQLAlchemy database session.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>interval</code>
+            </td>
+            <td>
+                  <code><span title="users.users_goals.schema.Interval">Interval</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Optional filter by goal interval.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>activity_type</code>
+            </td>
+            <td>
+                  <code><span title="users.users_goals.schema.ActivityType">ActivityType</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Optional filter by activity type.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>goal_type</code>
+            </td>
+            <td>
+                  <code><span title="users.users_goals.schema.GoalType">GoalType</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Optional filter by goal type.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="list">list</span>[<span title="users.users_goals.models.UsersGoal">UsersGoal</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>List of UsersGoal models matching the filters.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="fastapi.HTTPException">HTTPException</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If database error occurs.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>backend/app/users/users_goals/crud.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@core_decorators</span><span class="o">.</span><span class="n">handle_db_errors</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_user_goals_by_user_id</span><span class="p">(</span>
+    <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">db</span><span class="p">:</span> <span class="n">Session</span><span class="p">,</span>
+    <span class="n">interval</span><span class="p">:</span> <span class="n">user_goals_schema</span><span class="o">.</span><span class="n">Interval</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">activity_type</span><span class="p">:</span> <span class="n">user_goals_schema</span><span class="o">.</span><span class="n">ActivityType</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">goal_type</span><span class="p">:</span> <span class="n">user_goals_schema</span><span class="o">.</span><span class="n">GoalType</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">user_goals_models</span><span class="o">.</span><span class="n">UsersGoal</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Retrieve goals for a specific user with optional filters.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        user_id: The ID of the user.</span>
+<span class="sd">        db: SQLAlchemy database session.</span>
+<span class="sd">        interval: Optional filter by goal interval.</span>
+<span class="sd">        activity_type: Optional filter by activity type.</span>
+<span class="sd">        goal_type: Optional filter by goal type.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        List of UsersGoal models matching the filters.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        HTTPException: If database error occurs.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">stmt</span> <span class="o">=</span> <span class="n">select</span><span class="p">(</span><span class="n">user_goals_models</span><span class="o">.</span><span class="n">UsersGoal</span><span class="p">)</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
+        <span class="n">user_goals_models</span><span class="o">.</span><span class="n">UsersGoal</span><span class="o">.</span><span class="n">user_id</span> <span class="o">==</span> <span class="n">user_id</span>
+    <span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">interval</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">stmt</span> <span class="o">=</span> <span class="n">stmt</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">user_goals_models</span><span class="o">.</span><span class="n">UsersGoal</span><span class="o">.</span><span class="n">interval</span> <span class="o">==</span> <span class="n">interval</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">activity_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">stmt</span> <span class="o">=</span> <span class="n">stmt</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
+            <span class="n">user_goals_models</span><span class="o">.</span><span class="n">UsersGoal</span><span class="o">.</span><span class="n">activity_type</span> <span class="o">==</span> <span class="n">activity_type</span><span class="o">.</span><span class="n">value</span>
+        <span class="p">)</span>
+    <span class="k">if</span> <span class="n">goal_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">stmt</span> <span class="o">=</span> <span class="n">stmt</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">user_goals_models</span><span class="o">.</span><span class="n">UsersGoal</span><span class="o">.</span><span class="n">goal_type</span> <span class="o">==</span> <span class="n">goal_type</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">stmt</span><span class="p">)</span><span class="o">.</span><span class="n">scalars</span><span class="p">()</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="backend.app.users.users_goals.update_user_goal" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">update_user_goal</span>
+
+
+</h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">update_user_goal</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="n">user_goal</span><span class="p">,</span> <span class="n">db</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Update a user's goal.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>user_id</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>ID of the user.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>user_goal</code>
+            </td>
+            <td>
+                  <code><span title="users.users_goals.schema.UsersGoalUpdate">UsersGoalUpdate</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Schema with fields to update.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>db</code>
+            </td>
+            <td>
+                  <code><span title="sqlalchemy.orm.Session">Session</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>SQLAlchemy database session.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="users.users_goals.models.UsersGoal">UsersGoal</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The updated UsersGoal model.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="fastapi.HTTPException">HTTPException</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If goal not found (404) or database
+error occurs (500).</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>backend/app/users/users_goals/crud.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@core_decorators</span><span class="o">.</span><span class="n">handle_db_errors</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update_user_goal</span><span class="p">(</span>
+    <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">user_goal</span><span class="p">:</span> <span class="n">user_goals_schema</span><span class="o">.</span><span class="n">UsersGoalUpdate</span><span class="p">,</span>
+    <span class="n">db</span><span class="p">:</span> <span class="n">Session</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">user_goals_models</span><span class="o">.</span><span class="n">UsersGoal</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Update a user&#39;s goal.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        user_id: ID of the user.</span>
+<span class="sd">        user_goal: Schema with fields to update.</span>
+<span class="sd">        db: SQLAlchemy database session.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The updated UsersGoal model.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        HTTPException: If goal not found (404) or database</span>
+<span class="sd">            error occurs (500).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">user_goal</span><span class="o">.</span><span class="n">user_id</span> <span class="o">!=</span> <span class="n">user_id</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span>
+            <span class="n">status_code</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_403_FORBIDDEN</span><span class="p">,</span>
+            <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;Cannot edit user goal for another user&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="n">db_user_goal</span> <span class="o">=</span> <span class="n">get_user_goal_by_user_and_goal_id</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="n">user_goal</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">db</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">db_user_goal</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span>
+            <span class="n">status_code</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_404_NOT_FOUND</span><span class="p">,</span>
+            <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;User goal not found&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="c1"># Update only provided fields</span>
+    <span class="n">update_data</span> <span class="o">=</span> <span class="n">user_goal</span><span class="o">.</span><span class="n">model_dump</span><span class="p">(</span><span class="n">exclude_unset</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;user_id&quot;</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">})</span>
+    <span class="k">for</span> <span class="n">field</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">update_data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">setattr</span><span class="p">(</span><span class="n">db_user_goal</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+
+    <span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">refresh</span><span class="p">(</span><span class="n">db_user_goal</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">db_user_goal</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
